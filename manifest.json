@@ -1,0 +1,43 @@
+{
+    "name": "Merdeka",
+    "short_name": "Merdeka",
+    "description": "merdeka.com - Berita Politik, Ekonomi, Hukum, Kriminal, Olahraga, Sepak Bola, Teknologi, Otomotif, Artis di Indonesia dan Dunia",
+    "start_url": "/",
+    "lang": "id-ID",
+    "display": "standalone",
+    "gcm_sender_id": "482941778795",
+    "theme_color": "#8318F5",
+    "background_color": "#ffffff",
+    "icons": [
+        {
+            "src": "https://incandescent-tanuki-5016e5.netlify.app/apple-touch-icon-precomposed.png",
+            "sizes": "129x129",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "https://incandescent-tanuki-5016e5.netlify.app/apple-touch-icon-144x144-precomposed-new.png",
+            "sizes": "114x114",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "https://incandescent-tanuki-5016e5.netlify.app/apple-touch-icon-120x120-precomposednew.png",
+            "sizes": "120x120",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "https://incandescent-tanuki-5016e5.netlify.app/apple-touch-icon-152x152-precomposed-new.png",
+            "sizes": "152x152",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "https://incandescent-tanuki-5016e5.netlify.app/apple-touch-icon-512x512-precomposed.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
