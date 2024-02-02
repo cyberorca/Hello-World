@@ -821,6 +821,7 @@ window.GAMLibrary = {
             var prop = 0;
 
             if (width == 300 && height == 250 && !containerEl.id.match(/(gpt-ad-div-multiads-|gpt-ad-div-showcase-placeholder|gpt-ad-div-exposer-placeholder)/gi)) {
+                console.log("width : height -> ", width, height);
                 let position = containerEl.parentElement && containerEl.parentElement.dataset.adsPosition ? containerEl.parentElement.dataset.adsPosition : indexMulti;
                 let containerId = config[position]["placeholder"];
                 let divAdsCont = containerEl.querySelector("div[id^='google_ads_iframe_']");
