@@ -539,8 +539,8 @@ var adsConfig = {
 };
 
 //set only 2 feedads and 1 masthead if its on trstd.ly site
-if("trstd.ly" === pageKlyObj.site){
-    adsConfig['feeds'] = Object.fromEntries(Object.entries(adsConfig['feeds']).slice(0,2));
+if ("trstd.ly" === pageKlyObj.site) {
+    adsConfig['feeds'] = Object.fromEntries(Object.entries(adsConfig['feeds']).slice(0, 2));
     adsConfig['hse'] = adsConfig['adv'] = adsConfig['rich'] = adsConfig['multi'] = {};
 }
 
@@ -851,6 +851,11 @@ function MavDefineHSEAds() {
     var readSection = document.querySelector(`section[data-template-id='73'], section[data-template-id='55']`)
     var newMastheadTemplate = document.querySelector("#gpt-ad-div-masthead-mvk");
     var obsoleteMastheadTemplate = document.querySelector("#gpt-ad-div-masthead-placeholder");
+
+    // exit if not set
+    if (!config[0]) {
+        return false;
+    }
 
     if (newMastheadTemplate && obsoleteMastheadTemplate) {
         obsoleteMastheadTemplate.parentElement.remove();
