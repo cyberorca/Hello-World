@@ -25,7 +25,7 @@ pbjs.que = pbjs.que || [];
 var adsConfig = {
     'feeds': {
         2: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-1",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-1",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -40,7 +40,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         4: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-2",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-2",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -55,7 +55,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         6: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-3",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-3",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -70,7 +70,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         8: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-4",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-4",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -85,7 +85,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         10: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-5",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-5",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -100,7 +100,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         12: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-6",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-6",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -115,7 +115,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         14: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-7",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-7",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -130,7 +130,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         16: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-8",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-8",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -145,7 +145,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         18: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-9",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-9",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -160,7 +160,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         20: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-10",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-10",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -175,7 +175,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         22: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-11",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-11",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -190,7 +190,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         24: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-12",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-12",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -205,7 +205,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         26: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-13",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-13",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -220,7 +220,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         28: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-14",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-14",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -235,7 +235,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         30: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-15",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/FEEDADS-15",
             sizes: [
                 [300, 600],
                 [300, 250],
@@ -253,7 +253,7 @@ var adsConfig = {
     },
     'hse': {
         0: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MASTHEAD",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MASTHEAD",
             sizes: [1, 1],
             placeholder: "gpt-ad-div-masthead-mvk",
             slotCreated: false,
@@ -261,7 +261,7 @@ var adsConfig = {
             isPrebidSlot: false
         },
         1: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/HEADLINE",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/HEADLINE",
             sizes: [320, 100],
             placeholder: "gpt-ad-div-headline-placeholder",
             slotCreated: false,
@@ -269,7 +269,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         2: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/SHOWCASE",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/SHOWCASE",
             sizes: [
                 [200, 200],
                 [250, 250],
@@ -281,7 +281,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         3: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/EXPOSER",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/EXPOSER",
             sizes: [
                 [160, 600],
                 [250, 250],
@@ -295,7 +295,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         4: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/BOTTOM_FRAME",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/BOTTOM_FRAME",
             sizes: [
                 [320, 50],
                 [320, 100]
@@ -308,21 +308,21 @@ var adsConfig = {
     },
     'adv': {
         0: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/ADVERTORIAL-1",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/ADVERTORIAL-1",
             sizes: "OOP",
             placeholder: "gpt-ad-div-advertorial1-placeholder",
             slotCreated: false,
             requested: false
         },
         1: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/ADVERTORIAL-2",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/ADVERTORIAL-2",
             sizes: "OOP",
             placeholder: "gpt-ad-div-advertorial2-placeholder",
             slotCreated: false,
             requested: false
         },
         2: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/ADVERTORIAL-3",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/ADVERTORIAL-3",
             sizes: "OOP",
             placeholder: "gpt-ad-div-advertorial3-placeholder",
             slotCreated: false,
@@ -331,7 +331,7 @@ var adsConfig = {
     },
     'rich': {
         0: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/RICH_FEEDADS",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/RICH_FEEDADS",
             sizes: "OOP",
             placeholder: "gpt-ad-div-rich-feedads-placeholder",
             slotCreated: false,
@@ -340,7 +340,7 @@ var adsConfig = {
     },
     'multi': {
         1: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-1",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-1",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -353,7 +353,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         2: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-2",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-2",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -366,7 +366,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         3: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-3",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-3",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -379,7 +379,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         4: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-4",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-4",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -392,7 +392,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         5: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-5",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-5",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -405,7 +405,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         6: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-6",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-6",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -418,7 +418,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         7: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-7",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-7",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -431,7 +431,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         8: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-8",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-8",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -444,7 +444,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         9: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-9",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-9",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -457,7 +457,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         10: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-10",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-10",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -470,7 +470,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         11: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-11",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-11",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -483,7 +483,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         12: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-12",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-12",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -496,7 +496,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         13: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-13",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-13",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -509,7 +509,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         14: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-14",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-14",
             sizes: [
                 [300, 250],
                 [320, 100],
@@ -522,7 +522,7 @@ var adsConfig = {
             isPrebidSlot: true
         },
         15: {
-            adunit: "/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-15",
+            adunit: "/36504930/KLY/MAVERICK/DREAM.CO.ID/MULTIADS-15",
             sizes: [
                 [300, 250],
                 [320, 100],
