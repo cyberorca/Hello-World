@@ -552,6 +552,7 @@ if ("trstd.ly" === pageKlyObj.site) {
             }
         }
     }
+    adsConfig['sponsored-text'] = 'Advertisement - Swipe up to continue';
 }
 
 mavInitPrebidAdunits();

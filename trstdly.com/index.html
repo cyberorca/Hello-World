@@ -323,6 +323,10 @@
             font-size: 10px;
         }
     }
+
+    .masthead-info:after{
+      content: var(--content,"Iklan - Geser ke atas untuk melanjutkan");
+    }
 </style>
 <style>
     video.blur-sm~.loader {
@@ -772,7 +776,7 @@
                         </div>
                      </div>
                      <span
-                        class="masthead-info bg-light-1 text-white font-semibold block vh-text-xs p-2 text-center">Iklan - Geser ke atas untuk melanjutkan</span>
+                        class="masthead-info bg-light-1 text-white font-semibold block vh-text-xs p-2 text-center" style="--content"></span>
                   </div>
                </section>
                <section
