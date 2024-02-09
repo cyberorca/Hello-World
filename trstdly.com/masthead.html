@@ -1,0 +1,272 @@
+<div>
+    <img src="https://tpc.googlesyndication.com/simgad/309395246906487937?" id="topframe-img-big" class="topframe-img" border="0" alt="" />
+</div>
+
+<script>
+    var _klyAd = parent.kly || parent.kmklabs;
+    var _pBody = parent.document.querySelector("body");
+    var topFrameImageBig = document.getElementById("topframe-img-big");
+    var gamTopframeLandingPage = "https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsvnfyTR8eP0s3Cdfn2fCsOnzmf049Mq7_Y3JlfnUOGk9Qa6O5625GoFW2vaWYMCCzIBhbaLiPnfXx2xuwor4UrxK7-wBi1BWiUQpAvax1_B4AI2GDFRA2kntzPLYkLpvZHuVUcSxfV9ndEKbnJQxPe1BL8gPfRkemMVUj8zds0UH-BUSMtQVFFO10TfE-b5vNmHCseqFnvy2JdeTfWJ-Hf7WTe9HVtg6y4&sig=Cg0ArKJSzEQPA18JifRUEAE&fbs_aeid=%5Bgw_fbsaeid%5D&urlfix=1&adurl=https://bbri.id/QLolabyBRI";
+    var gamTopframeDMPCat = `Finance`.replace(/(\n|\s+)/ig, '').split(/\s*,\s*/); // optional input
+    var gamMacro = '{"lineitemId":"0", "advertiserId":"0", "orderId":"0", "creativeId":"138459668950", "adunitId":"35505050"}';
+    var topFrameContainer = window.frameElement.parentElement.parentElement;
+    var paralaxWrapper = parent.document.querySelector('#div-gpt-ad-topfrm-parallax-wrapper');
+
+    initParent();
+    topFrameImageBig.addEventListener("click", topframeGenerateDMPLP);
+
+    function initParent() {
+        var _style_ = document.createElement("style"),
+            _slotId = topFrameContainer.id,
+            _visualDimension = parent.visualViewport || parent.window.screen,
+            _screenWidth = _visualDimension.width,
+            _screenHeight = _visualDimension.height,
+            _width = _screenWidth > 720 ? 480 : _screenWidth,
+            _height = (530 / 480) * _width,
+            _parallaxWidth = `width: ${_width}px;`,
+            _parallaxPosition = `position: relative!important;`;
+
+        switch (_klyAd.site) {
+            case 'Kapanlagi':
+                if ('infeed' === _klyAd.channel.name) {
+                    _parallaxWidth = `width: unset !important`;
+                    _parallaxPosition = `position: inherit!important`;
+                }
+                break;
+            default:
+                _parallaxWidth = `width: ${_width}px;`;
+                _parallaxPosition = `position: relative!important;`;
+        }
+
+        if (_klyAd.site.match(/(merdeka|dream|otosia)/ig)) {
+            let sectionBody = window.frameElement.parentElement.parentElement.parentElement;
+            let mainScreen = parent.document.querySelector(".main-screen");
+            if (_screenWidth > 720) {
+                _width = mainScreen ? mainScreen.clientWidth : 460;
+                _height = (530 / 480) * _width;
+            }
+            sectionBody && sectionBody.style.setProperty("height", `${_height}px`);
+        }
+
+        window.frameElement.width = _width;
+        window.frameElement.height = _height;
+
+        var _styleTopframe = `
+            div#div-gpt-ad-topfrm-parallax-wrapper {
+                ${_parallaxWidth};
+                height:${_height}px !important;
+                ${_parallaxPosition};
+                box-sizing: border-box!important;
+                background: #333333;
+                background-image: url(https://preview-kly.akamaized.net/logo_placeholder_kly.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                max-width: 720px;
+            }
+
+            div#div-gpt-ad-topfrm-parallax-wrapper>#${_slotId} {
+                position: absolute!important;
+                top: 0!important;
+                left: 0!important;
+                width: ${_width}px !important;
+                height: ${_height}px !important;
+                border: 0!important;
+                margin: 0!important;
+                padding: 0!important;
+                clip: rect(0, auto, auto, 0)!important;
+                -webkit-clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%)!important;
+                clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%)!important
+            }
+
+            div#div-gpt-ad-topfrm-parallax-wrapper>#${_slotId}>[id^="google_ads_iframe_"] {
+                position: fixed!important;
+                top: 0!important;
+                width: ${_width}px;
+                height:${_height}px !important;
+                -webkit-transform: translateZ(0)!important;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-pack: center;
+                justify-content: center
+            }
+
+            div#div-gpt-ad-topfrm-parallax-wrapper>#${_slotId}>[id^="google_ads_iframe_"]>iframe {
+                -ms-flex-item-align: stretch;
+                align-self: stretch;
+                width: ${_width}px;
+                height:${_height}px;
+                position: fixed;
+                top: 0;
+                left: 0; 
+                display: block;
+                max-width: 720px;
+            }
+            .ivs-floating-widget.ivs-content-mediaready.ivs-content-loaded { z-index: 999 !important; }
+        `;
+
+        _style_.textContent = _styleTopframe;
+
+        paralaxWrapper && paralaxWrapper.previousElementSibling ? paralaxWrapper.previousElementSibling.remove() : '';
+        paralaxWrapper && paralaxWrapper.insertAdjacentElement("beforebegin", _style_);
+
+        topFrameImageBig.style.width = _width + "px";
+        topFrameImageBig.style.height = _height + "px";
+
+        (_screenWidth > _screenHeight) ? collapseParallax(): expandParallax();
+
+        /* IF VISUALVIEWPORT EXISTS */
+        if (parent.visualViewport) {
+            parent.visualViewport.addEventListener("resize", onChangeOrientation);
+        } else {
+            var mql = parent.window.matchMedia("(orientation: portrait)");
+
+            mql.addListener(function(m) {
+                var _mqlWidth = parent.window.screen.width > 720 ? 480 : parent.window.screen.width,
+                    _mqlHeight = (530 / 480) * _mqlWidth,
+                    _mqIsMobile = /Mobi/i.test(parent.window.navigator.userAgent);
+
+                if (_klyAd.site.match(/(merdeka|dream|otosia)/ig)) {
+                    let mainScreen = parent.document.querySelector(".main-screen");
+                    _mqlWidth = mainScreen ? mainScreen.clientWidth : 460;
+                    _mqlHeight = (530 / 480) * _mqlWidth;
+                }
+                /** 
+                 * Check wether it display on mobile or desktop
+                 */
+                if (!_mqIsMobile) {
+                    expandParallax();
+                } else {
+                    if (m.matches) {
+                        expandParallax();
+                    } else {
+                        collapseParallax();
+                    }
+                }
+                resizeCreative(_mqlWidth, _mqlHeight);
+            });
+        }
+
+    }
+
+    function onChangeOrientation() {
+        var _orien = null,
+            _vDim = parent.visualViewport || parent.window.screen,
+            _vvWidth = _vDim.width > 720 ? 480 : _vDim.width,
+            _iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent),
+            _isMobile = /Mobi/i.test(parent.window.navigator.userAgent),
+            _vvHeight = (530 / 480) * _vvWidth;
+
+        _orien = _vDim.height > _vDim.width ? 1 : 0;
+
+        if (_klyAd.site.match(/(merdeka|dream|otosia|trstd)/ig)) {
+            let mainScreen = parent.document.querySelector(".main-screen");
+            _vvWidth = mainScreen ? mainScreen.clientWidth : 460;
+            _vvHeight = (530 / 480) * _vvWidth;
+        }
+
+        /** 
+         * Check wether it display on mobile or desktop
+         */
+        if (!_isMobile) {
+            expandParallax();
+        } else {
+            if (_orien) {
+                expandParallax();
+            } else {
+                collapseParallax();
+            }
+        }
+
+        // if (!_iOS) {
+        resizeCreative(_vvWidth, _vvHeight);
+        // }
+    }
+
+    function resizeCreative(width, height) {
+        topFrameImageBig.style.setProperty("width", width + "px");
+        topFrameImageBig.style.setProperty("height", height + "px");
+        window.frameElement.style.setProperty("width", width + "px", "important");
+        window.frameElement.style.setProperty("height", height + "px", "important");
+        window.frameElement.parentElement.style.setProperty("width", width + "px", "important");
+        window.frameElement.parentElement.style.setProperty("height", height + "px", "important");
+        window.frameElement.parentElement.parentElement.style.setProperty("width", width + "px", "important");
+        window.frameElement.parentElement.parentElement.style.setProperty("height", height + "px", "important");
+        window.frameElement.parentElement.parentElement.parentElement.style.setProperty("width", width + "px", "important");
+        window.frameElement.parentElement.parentElement.parentElement.style.setProperty("height", height + "px", "important");
+    }
+
+    function collapseParallax() {
+
+        if (onWideScreen()) return;
+
+        setTimeout((e) => {
+            (paralaxWrapper) ? (paralaxWrapper.style.display = "none") : '';
+            (topFrameContainer) ? (topFrameContainer.style.display = "none") : '';
+        }, 500);
+    }
+
+    function expandParallax() {
+        if (onWideScreen()) return;
+        (paralaxWrapper) ? (paralaxWrapper.style.display = "block") : '';
+        (topFrameContainer) ? (topFrameContainer.style.display = "block") : '';
+    }
+
+    function onWideScreen() {
+        /** 
+         * Check wether it display on mobile or desktop 
+         */
+        var isMobile = /Mobi/i.test(parent.window.navigator.userAgent);
+        if (!isMobile) {
+            setTimeout((e) => {
+
+                (topFrameContainer) ? (topFrameContainer.style.display = "block") : '';
+                if (paralaxWrapper) {
+                    paralaxWrapper.style.display = "block";
+                    paralaxWrapper.style.setProperty("background", "unset", "important");
+                    paralaxWrapper.style.setProperty("margin-left", "auto", "important");
+                    paralaxWrapper.style.setProperty("margin-right", "auto", "important");
+
+                }
+
+            }, 500);
+            return true;
+        }
+        return false;
+    }
+
+    function topframeGenerateDMPLP() {
+        if (typeof parent.window.createDMPTracker === 'function') {
+            parent.window.createDMPTracker(gamTopframeDMPCat, gamTopframeLandingPage, gamMacro);
+        } else {
+            if (parent.window.GAMLibrary && typeof parent.window.GAMLibrary.createDMPTracker === 'function') {
+                parent.window.GAMLibrary.createDMPTracker(gamTopframeDMPCat, gamTopframeLandingPage, gamMacro);
+            } else {
+                parent.window.open(gamTopframeLandingPage, '_blank');
+            }
+        }
+    }
+
+    if (['liputan6', 'otosia', 'fimela', 'bola.com', 'Merdeka', 'Dream', 'Kapanlagi', 'bola'].indexOf(_klyAd.site) > -1) {
+        var _FIND_TOPFRAME_STICKY_ = setInterval(function() {
+            if (typeof parent._UNSET_TOPFRAME_STICKY_ == 'function' && parent._TOPFRAME_STICKY_IS_READY_ == true) {
+
+                clearInterval(_FIND_TOPFRAME_STICKY_);
+                parent._TOPFRAME_STICKY_SCROLL_SPEED_ = 1;
+                parent._UNSET_TOPFRAME_STICKY_();
+                var _target_ = parent.document.querySelector(".topframe-sticky-counter");
+                if (_target_) {
+                    _target_.remove();
+                }
+            }
+        }, 100);
+    }
+    if (['Merdeka'].indexOf(_klyAd.site) > -1) {
+        if (['ChannelPage', 'TagPage'].indexOf(_klyAd.pageType) > -1) {
+            parent._TOPFRAME_STICKY_END_ = !0;
+        }
+    }
+</script>
