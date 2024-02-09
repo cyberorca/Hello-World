@@ -545,7 +545,7 @@ if ("trstd.ly" === pageKlyObj.site) {
         if (['hse','adv', 'rich','multi'].indexOf(conf) > -1) {
             var config = adsConfig[conf];
             for (const prop in config) {
-                if(conf=="hse" && prop == 1) continue;
+                if(conf=="hse" && prop == 0) continue;
                 config[prop].requested = true;
                 config[prop].slotCreated = true;
             }
