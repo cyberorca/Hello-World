@@ -535,7 +535,8 @@ var adsConfig = {
             isPrebidSlot: true
         },
 
-    }
+    },
+    'sponsored-text': 'Iklan - Geser ke atas untuk melanjutkan'
 };
 
 //set only 2 feedads and 1 masthead if its on trstd.ly site
@@ -1179,7 +1180,7 @@ function MavCreateContainerAds(index, currentEl) {
         div.dataset.theme = "ads";
         div.dataset.adsPosition = Math.floor(index / multiplied);
         div.className = 'section snap-always snap-start w-full h-full shrink-0 transition bg-white text-white ads-section';
-        div.innerHTML = `<div id="` + targetElID + `-loader" class="hidden" style="width:24px;height:24px;position:fixed;top:10px;z-index:1;left:50%"><svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#fff" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"/></path></svg></div><div id="` + targetAdsID + `" class="placeholder justify-center items-center section-body flex flex-col h-full relative sasa"></div>`;
+        div.innerHTML = `<div id="${targetElID}-loader" class="hidden" style="width:24px;height:24px;position:fixed;top:10px;z-index:1;left:50%"><svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#fff" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"/></path></svg></div><div id="${targetAdsID}" class="placeholder justify-center items-center section-body flex flex-col h-full relative sasa" style="--content:'${adsConfig['sponsored-text']}'"></div>`;
 
         //insert ads section container after [n]index and push it's element inside IntersectionObserver event listener
         if (currentEl) {
@@ -1187,6 +1188,7 @@ function MavCreateContainerAds(index, currentEl) {
                 currentEl.nextElementSibling.insertAdjacentElement("beforebegin", div);
             } else {
                 currentEl.insertAdjacentElement("beforebegin", div);
+                div.querySelector(".placeholder:after")
             }
 
             setTimeout(() => {
