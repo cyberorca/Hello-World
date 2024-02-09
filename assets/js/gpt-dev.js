@@ -541,7 +541,16 @@ var adsConfig = {
 //set only 2 feedads and 1 masthead if its on trstd.ly site
 if ("trstd.ly" === pageKlyObj.site) {
     adsConfig['feeds'] = Object.fromEntries(Object.entries(adsConfig['feeds']).slice(0, 2));
-    adsConfig['hse'] = adsConfig['adv'] = adsConfig['rich'] = adsConfig['multi'] = {};
+    for (const conf in adsConfig) {
+        if (['hse','adv', 'rich','multi'].indexOf(conf) > -1) {
+            var config = adsConfig[conf];
+            for (const prop in config) {
+                if(conf=="hse" && prop == 1) continue;
+                config[prop].requested = true;
+                config[prop].slotCreated = true;
+            }
+        }
+    }
 }
 
 mavInitPrebidAdunits();
