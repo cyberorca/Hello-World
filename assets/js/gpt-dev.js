@@ -541,6 +541,7 @@ var adsConfig = {
 //set only 2 feedads and 1 masthead if its on trstd.ly site
 if("trstd.ly" === pageKlyObj.site){
     adsConfig['feeds'] = Object.fromEntries(Object.entries(adsConfig['feeds']).slice(0,2));
+    adsConfig['hse'] = adsConfig['adv'] = adsConfig['rich'] = adsConfig['multi'] = {};
 }
 
 mavInitPrebidAdunits();
