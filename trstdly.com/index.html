@@ -101,7 +101,7 @@
       </style>
       <!-- UPDATE DONI-->
       <style>@import url("/assets/css/trstdly.b6c23cbb.css");[data-section="mobile-billboard"]{display:block}</style>
-      
+
       <meta property="og:title" content="trstdly: trusted news in simple english">
       <meta property="og:type" content="website">
       <meta property="og:url" content="https://www.trstdly.com">
@@ -202,150 +202,174 @@
    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
    <!-- <script async src="https://micro.rubiconproject.com/prebid/dynamic/12534.js"></script> -->
    <script async src="/assets/js/gpt-dev.js"></script>
-   <style>
-      div.masthead-inner.puller {
-         position: fixed;
-         top: 0;
-         z-index: 999;
-         transform: scale(.55) translate(38%, -25%);
-         border-radius: 20px;
-         overflow: hidden;
-         height: unset !important;
-      }
-      
-      div.masthead-inner.puller span.block.vh-text-xs.bg-black-40.text-white.p-2.text-center {
-         display: none;
-      }
-      
-      div.masthead-inner.puller::after {
-         content: "";
-         position: absolute;
-         height: 10px;
-         width: 100%;
-         background: #ff0;
-         left: 0;
-         top: 0;
-         animation: 7s forwards tf-puller-loading
-      }
-      
-      @keyframes tf-puller-loading {
-         0% {
-               width: 0
-         }
-         100% {
-               width: 100%
-         }
-      }
-   </style>
-   <style>
-      .ads-container {
-         display: table;
-      }
-
-      .section-body .banner {
-         background-color: transparent !important;
-      }
-
-      .ads-container > div {
-         vertical-align: middle;
-         display: table-cell;
-      }
-
-      .ads-container iframe,
-      .showcase,
-      .headline,
-      .exposer {
-         margin: 0 auto;
-      }
-
-      .headline {
-         width: 320px;
-      }
-
-      .bottomframe {
-         min-height: 50px;
-         position: sticky;
-         bottom: 0;
-         z-index: 99;
-      }
-
-      .bottomframe iframe {
-         margin: 0 auto;
-      }
-
-      .showcase,
-      .exposer {
-         width: 300px;
-      }
-
-      .masthead {
-         aspect-ratio: auto 48 / 53;
-         background: #333333;
-         background-repeat: no-repeat;
-         background-position: center;
-      }
-
-      .masthead iframe {
-         position: relative !important;
-      }
-
-      .placeholder:empty::before {
-         background-color: dimgrey;
-         border-radius: 5px;
-         color: lightgrey;
-         content: "Ad";
-         font: 12px sans-serif;
-         padding: 3px;
-         text-align: center;
-         width: 20px;
-      }
-   </style>
-   <style>
-      video.blur-sm~.loader {
-         display: block
-      }
-      
-      .ease {
-         transition-timing-function: ease;
-      }
-      
-      .h-full-2x {
-         height: 150%
-      }
-      
-      .shrink .article {
-         --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.8), var(--tw-gradient-to);
-      }
-      
-      .shrink .article-desc {
-         bottom: 30%;
-      }
-      
-      .shrink .article-desc .btn--ads {
-         --bgcolor-adsActive: var(--color-primary-40);
-         --color-adsActive: var(--color-light1)
-      }
-      
-      .shrink .article-desc .article-title.opacity-0,
-      .shrink .article-desc .article-paragraph.opacity-0,
-      .shrink .article-info {
-         opacity: 1;
-      }
-      
-      .shrink .article-desc .article-paragraph.max-h-0 {
-         max-height: 8rem;
-      }
-      
-      .shrink .video-scale {
-         transform: scale(.8);
-         border-radius: 1em;
-      }
-      
-      .shrink .video-scale img {
-         border-radius: 1em;
-      }
-   </style>
-   <!-- GPT ADS END -->
+<style>
+    div.masthead-inner.puller {
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        transform: scale(.55) translate(38%, -25%);
+        border-radius: 20px;
+        overflow: hidden;
+        height: unset !important;
+    }
+    
+    div.masthead-inner.puller span.block.vh-text-xs.bg-black-40.text-white.p-2.text-center {
+        display: none;
+    }
+    
+    div.masthead-inner.puller::after {
+        content: "";
+        position: absolute;
+        height: 10px;
+        width: 100%;
+        background: #ff0;
+        left: 0;
+        top: 0;
+        animation: 7s forwards tf-puller-loading
+    }
+    
+    @keyframes tf-puller-loading {
+        0% {
+            width: 0
+        }
+        100% {
+            width: 100%
+        }
+    }
+</style>
+<style>
+    .ads-container {
+        display: table
+    }
+    
+    .section-body .banner {
+        background-color: transparent !important;
+    }
+    
+    .ads-container>div {
+        vertical-align: middle;
+        display: table-cell
+    }
+    
+    .ads-container iframe,
+    .showcase,
+    .headline,
+    .exposer {
+        margin: 0 auto;
+    }
+    
+    .headline {
+        width: 320px;
+    }
+    
+    .bottomframe {
+        min-height: 50px;
+        position: sticky;
+        bottom: 0;
+        z-index: 99;
+    }
+    
+    .bottomframe iframe {
+        margin: 0 auto;
+    }
+    
+    .showcase,
+    .exposer {
+        width: 300px;
+    }
+    
+    .masthead {
+        aspect-ratio: auto 48 / 53;
+        background: #333333;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .masthead iframe {
+        position: relative !important;
+    }
+    
+    .placeholder:empty::before {
+        background-color: dimgrey;
+        border-radius: 5px;
+        color: lightgrey;
+        content: "Ad";
+        font: 12px sans-serif;
+        padding: 3px;
+        text-align: center;
+        width: 20px;
+    }
+    
+    .placeholder:empty::after {
+        opacity: 0;
+    }
+    
+    .placeholder:after {
+        content: 'Iklan - Geser ke atas untuk melanjutkan';
+        --colorset: var(--color-light1);
+        background-color: var(--text-white);
+        font-size: 8px;
+        --tw-text-opacity: 1;
+        color: #444444;
+        font-weight: 600;
+        text-align: center;
+        padding: .5rem;
+        display: block;
+        width: 100%;
+    }
+    
+    @media (min-width: 360px) {
+        .placeholder:after {
+            font-size: 10px;
+        }
+    }
+</style>
+<style>
+    video.blur-sm~.loader {
+        display: block
+    }
+    
+    .ease {
+        transition-timing-function: ease;
+    }
+    
+    .h-full-2x {
+        height: 150%
+    }
+    
+    .shrink .article {
+        --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.8), var(--tw-gradient-to);
+    }
+    
+    .shrink .article-desc {
+        bottom: 30%;
+    }
+    
+    .shrink .article-desc .btn--ads {
+        --bgcolor-adsActive: var(--color-primary-40);
+        --color-adsActive: var(--color-light1)
+    }
+    
+    .shrink .article-desc .article-title.opacity-0,
+    .shrink .article-desc .article-paragraph.opacity-0,
+    .shrink .article-info {
+        opacity: 1;
+    }
+    
+    .shrink .article-desc .article-paragraph.max-h-0 {
+        max-height: 8rem;
+    }
+    
+    .shrink .video-scale {
+        transform: scale(.8);
+        border-radius: 1em;
+    }
+    
+    .shrink .video-scale img {
+        border-radius: 1em;
+    }
+</style>
+<!-- GPT ADS END -->
    </head>
    <body
       class="vh-text-md leading-normal font-primary-1 bg-stone-100 dark:bg-black-40">
