@@ -538,6 +538,11 @@ var adsConfig = {
     }
 };
 
+//set only 2 feedads and 1 masthead if its on trstd.ly site
+if("trstd.ly" === pageKlyObj.site){
+    adsConfig['feeds'] = Object.fromEntries(Object.entries(adsConfig['feeds']).slice(0,2));
+}
+
 mavInitPrebidAdunits();
 
 var definedFeedSlot = function(prop, render) {
@@ -670,7 +675,8 @@ window.GAMLibrary = {
             var config = adsConfig['multi'];
             var prop = 0;
 
-            if (width == 300 && height == 250 && !containerEl.id.match(/(gpt-ad-div-multiads-|gpt-ad-div-showcase-placeholder|gpt-ad-div-exposer-placeholder)/ig)) {
+            //trigger multiads if site not trstd.ly with ad size 300x250
+            if (width == 300 && height == 250 && !containerEl.id.match(/(gpt-ad-div-multiads-|gpt-ad-div-showcase-placeholder|gpt-ad-div-exposer-placeholder)/ig) && "trstd.ly" !== pageKlyObj.site) {
                 let position = containerEl.parentElement && containerEl.parentElement.dataset.adsPosition ? containerEl.parentElement.dataset.adsPosition : indexMulti;
                 let containerId = config[position]['placeholder'];
                 let divAdsCont = containerEl.querySelector("div[id^='google_ads_iframe_']");
