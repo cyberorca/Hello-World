@@ -554,7 +554,6 @@ if ("trstd.ly" === pageKlyObj.site) {
         }
     }
     adsConfig['sponsored-text'] = 'Advertisement - Swipe up to continue';
-    // document.querySelector(".masthead-info").setAttribute("style",`--content:'${adsConfig['sponsored-text']}'`);
 }
 
 mavInitPrebidAdunits();

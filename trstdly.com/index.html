@@ -198,184 +198,197 @@
       <style>.section-body
          p{overflow-wrap:break-word}.btn--foryou,.wimvk--fyp-legacy{display:none !important}.btn--followChannel{--color:#1F8E81;--backgroundColor:#EBFBE5;background-color:var(--backgroundColor);color:var(--color)}.btn--followChannel:hover{background-color:var(--color);color:var(--color-white)}.dark [data-template="info-media-video-embed-horizontal-v1.2"].bg-light-5{color:white}
       </style>
-      <!-- GPT ADS START -->
-         <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-         <!-- <script async src="https://micro.rubiconproject.com/prebid/dynamic/12534.js"></script> -->
-         <script async src="/assets/js/gpt-dev.js"></script>
-         <style>
-            div.masthead-inner.puller {
-               position: fixed;
-               top: 0;
-               z-index: 999;
-               transform: scale(.55) translate(38%, -25%);
-               border-radius: 20px;
-               overflow: hidden;
-               height: unset !important;
-            }
-            
-            div.masthead-inner.puller span.block.vh-text-xs.bg-black-40.text-white.p-2.text-center {
-               display: none;
-            }
-            
-            div.masthead-inner.puller::after {
-               content: "";
-               position: absolute;
-               height: 10px;
-               width: 100%;
-               background: #ff0;
-               left: 0;
-               top: 0;
-               animation: 7s forwards tf-puller-loading
-            }
-            
-            @keyframes tf-puller-loading {
-               0% {
-                     width: 0
-               }
-               100% {
-                     width: 100%
-               }
-            }
-         </style>
-         <style>
-            .ads-container {
-               display: table
-            }
-            
-            .section-body .banner {
-               background-color: transparent !important;
-            }
-            
-            .ads-container>div {
-               vertical-align: middle;
-               display: table-cell
-            }
-            
-            .ads-container iframe,
-            .showcase,
-            .headline,
-            .exposer {
-               margin: 0 auto;
-            }
-            
-            .headline {
-               width: 320px;
-            }
-            
-            .bottomframe {
-               min-height: 50px;
-               position: sticky;
-               bottom: 0;
-               z-index: 99;
-            }
-            
-            .bottomframe iframe {
-               margin: 0 auto;
-            }
-            
-            .showcase,
-            .exposer {
-               width: 300px;
-            }
-            
-            .masthead {
-               aspect-ratio: auto 48 / 53;
-               background: #333333;
-               background-repeat: no-repeat;
-               background-position: center;
-            }
-            
-            .masthead iframe {
-               position: relative !important;
-            }
-            
-            .placeholder:empty::before {
-               background-color: dimgrey;
-               border-radius: 5px;
-               color: lightgrey;
-               content: "Ad";
-               font: 12px sans-serif;
-               padding: 3px;
-               text-align: center;
-               width: 20px;
-            }
-            
-            .placeholder:empty::after {
-               opacity: 0;
-            }
-            
-            .placeholder:after {
-               content: var(--content,"Iklan - Geser ke atas untuk melanjutkan");
-               --colorset: var(--color-light1);
-               background-color: var(--text-white);
-               font-size: 8px;
-               --tw-text-opacity: 1;
-               color: #444444;
-               font-weight: 600;
-               text-align: center;
-               padding: .5rem;
-               display: block;
-               width: 100%;
-            }
-            
-            @media (min-width: 360px) {
-               .placeholder:after {
-                     font-size: 10px;
-               }
-            }
-
-            /* NEW UPDATE DONI - 09022024 */
-            .masthead-info:after{
-               content: var(--content,"");
-            }
-            /* NEW UPDATE DONI - 09022024 */
-         </style>
-         <style>
-            video.blur-sm~.loader {
-               display: block
-            }
-            
-            .ease {
-               transition-timing-function: ease;
-            }
-            
-            .h-full-2x {
-               height: 150%
-            }
-            
-            .shrink .article {
-               --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.8), var(--tw-gradient-to);
-            }
-            
-            .shrink .article-desc {
-               bottom: 30%;
-            }
-            
-            .shrink .article-desc .btn--ads {
-               --bgcolor-adsActive: var(--color-primary-40);
-               --color-adsActive: var(--color-light1)
-            }
-            
-            .shrink .article-desc .article-title.opacity-0,
-            .shrink .article-desc .article-paragraph.opacity-0,
-            .shrink .article-info {
-               opacity: 1;
-            }
-            
-            .shrink .article-desc .article-paragraph.max-h-0 {
-               max-height: 8rem;
-            }
-            
-            .shrink .video-scale {
-               transform: scale(.8);
-               border-radius: 1em;
-            }
-            
-            .shrink .video-scale img {
-               border-radius: 1em;
-            }
-         </style>
-      <!-- GPT ADS END -->
+   <script>
+      window.ahoyUserDefinedConfig = {
+          sendBatch: true,
+          environment: 'production',
+          plentyHostnameProduction: 'https://cdp.vidio.com',
+          plentyHostnameStaging: 'https://cdp.int.vidio.com'
+      };
+      var urlParams = new URLSearchParams(window.location.search);
+  </script>
+  <script src="https://static-web.prod.vidiocdn.com/ahoy/ahoy-falcon-2022-01-13-02-35-43.js" defer crossorigin="true"></script>
+  <script src="https://personalization.vidio.com/embed-internal.8324be04cc0adb1be9165f1847ed900281851c7a.js?enable_ptid=false" crossorigin="true" id="embed-internal" defer></script>
+  <!-- GPT ADS START -->
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+  <script async src="https://micro.rubiconproject.com/prebid/dynamic/12534.js"></script>
+  <script>
+      var pageKlyObj=void 0!==window.kly?window.kly:window.kmklabs,isHSEcreated=!1,isFirstLoad=!0,nextIndex=0,indexMulti=1,lastPageOrder=0,nextAdsId=[];const qUrl=new URLSearchParams(window.location.search),pOrder=qUrl.get("o"),multiply=qUrl.get("m"),multiplied=multiply?+multiply:2,order=pOrder?pOrder.split(","):[1],PREBID_TIMEOUT=1e3;window.googletag=window.googletag||{cmd:[]};var pbjs=pbjs||{};pbjs.que=pbjs.que||[];var adsConfig={feeds:{2:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-1",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-2-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},4:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-2",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-4-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},6:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-3",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-6-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},8:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-4",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-8-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},10:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-5",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-10-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},12:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-6",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-12-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},14:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-7",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-14-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},16:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-8",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-16-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},18:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-9",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-18-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},20:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-10",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-20-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},22:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-11",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-22-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},24:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-12",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-24-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},26:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-13",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-26-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},28:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-14",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-28-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},30:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/FEEDADS-15",sizes:[[300,600],[300,250],[320,480],[120,600],[160,600]],placeholder:"gpt-ad-div-section-30-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0}},hse:{0:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MASTHEAD",sizes:[1,1],placeholder:"gpt-ad-div-masthead-mvk",slotCreated:!1,requested:!1,isPrebidSlot:!1},1:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/HEADLINE",sizes:[320,100],placeholder:"gpt-ad-div-headline-placeholder",slotCreated:!1,requested:!1,isPrebidSlot:!0},2:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/SHOWCASE",sizes:[[200,200],[250,250],[300,250]],placeholder:"gpt-ad-div-showcase-placeholder",slotCreated:!1,requested:!1,isPrebidSlot:!0},3:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/EXPOSER",sizes:[[160,600],[250,250],[300,600],[300,250],[320,480]],placeholder:"gpt-ad-div-exposer-placeholder",slotCreated:!1,requested:!1,isPrebidSlot:!0},4:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/BOTTOM_FRAME",sizes:[[320,50],[320,100]],placeholder:"gpt-ad-div-bottom-frame-placeholder",slotCreated:!1,requested:!1,isPrebidSlot:!0}},adv:{0:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/ADVERTORIAL-1",sizes:"OOP",placeholder:"gpt-ad-div-advertorial1-placeholder",slotCreated:!1,requested:!1},1:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/ADVERTORIAL-2",sizes:"OOP",placeholder:"gpt-ad-div-advertorial2-placeholder",slotCreated:!1,requested:!1},2:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/ADVERTORIAL-3",sizes:"OOP",placeholder:"gpt-ad-div-advertorial3-placeholder",slotCreated:!1,requested:!1}},rich:{0:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/RICH_FEEDADS",sizes:"OOP",placeholder:"gpt-ad-div-rich-feedads-placeholder",slotCreated:!1,requested:!1}},multi:{1:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-1",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-1-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},2:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-2",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-2-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},3:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-3",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-3-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},4:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-4",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-4-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},5:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-5",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-5-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},6:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-6",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-6-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},7:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-7",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-7-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},8:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-8",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-8-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},9:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-9",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-9-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},10:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-10",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-10-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},11:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-11",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-11-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},12:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-12",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-12-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},13:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-13",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-13-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},14:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-14",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-14-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0},15:{adunit:"/36504930/KLY/MAVERICK/TRSTDLY.COM/MULTIADS-15",sizes:[[300,250],[320,100],[320,50]],placeholder:"gpt-ad-div-multiads-15-placeholder",slotCreated:!1,requested:!1,viewable:!1,isPrebidSlot:!0}},"sponsored-text":"Iklan - Geser ke atas untuk melanjutkan"};if("trstd.ly"===pageKlyObj.site){adsConfig.feeds=Object.fromEntries(Object.entries(adsConfig.feeds).slice(0,2));for(const a in adsConfig)if(["hse","adv","rich","multi"].indexOf(a)>-1){var config=adsConfig[a];for(const e in config)"hse"==a&&0==e||(config[e].requested=!0,config[e].slotCreated=!0)}adsConfig["sponsored-text"]="Advertisement - Swipe up to continue"}mavInitPrebidAdunits();var definedFeedSlot=function(a,e){var i=adsConfig.feeds;googletag.cmd.push((function(){"OOP"==i[a].sizes?i[a].slot=googletag.defineOutOfPageSlot(i[a].adunit,i[a].placeholder).addService(googletag.pubads()):i[a].slot=googletag.defineSlot(i[a].adunit,i[a].sizes,i[a].placeholder).addService(googletag.pubads()),googletag.display(i[a].placeholder),e&&i[a].slot&&(mavRefreshBid(i[a].adunit,i[a].slot),i[a].requested=!0)}))},minusOneConfig=Object.entries(adsConfig.feeds).slice(order[0],adsConfig.feeds.length).map((a=>a[0]));function MavInitiateAds(){googletag.cmd.push((function(){MavPopulateTargetting(),MavDefineHSEAds(),googletag.pubads().addEventListener("slotOnload",GAMLibrary.gamSlotOnLoad.bind(GAMLibrary)),googletag.pubads().addEventListener("slotRenderEnded",GAMLibrary.gamSlotRenderEnded.bind(GAMLibrary)),googletag.pubads().setCentering(!0),googletag.pubads().enableSingleRequest(),googletag.pubads().collapseEmptyDivs(),googletag.pubads().disableInitialLoad(),googletag.enableServices(),"quran"!==pageKlyObj.gtm.subCategory&&MavDefineOOP(),showHSEAds()}))}function MavDefineOOP(){for(const e in adsConfig)if(["adv","rich"].indexOf(e)>-1){var a=adsConfig[e];for(const e in a)if(!a[e].requested&&!a[e].slotCreated){let i=document.createElement("div");i.id=a[e].placeholder,null!==document.body.insertAdjacentElement("beforeend",i)&&("OOP"==a[e].sizes?a[e].slot=googletag.defineOutOfPageSlot(a[e].adunit,a[e].placeholder).setTargeting("position",+e+1).addService(googletag.pubads()):a[e].slot=googletag.defineSlot(a[e].adunit,a[e].sizes,a[e].placeholder).setTargeting("position",+e+1).addService(googletag.pubads()),googletag.display(a[e].placeholder),googletag.pubads().refresh([a[e].slot]),a[e].slotCreated=!0,a[e].requested=!0)}}}function MavDefineHSEAds(){var a=adsConfig.hse,e=document.querySelector("section[data-template-id='73'], section[data-template-id='55']"),i=document.querySelector("#gpt-ad-div-masthead-mvk"),t=document.querySelector("#gpt-ad-div-masthead-placeholder");i&&t&&t.parentElement.remove(),e?MavCreateContainerHSEAds(e):a={0:adsConfig.hse[0]};for(const e in a)a[e].requested||("OOP"==a[e].sizes?a[e].slot=googletag.defineOutOfPageSlot(a[e].adunit,a[e].placeholder).setTargeting("position",["2"]).addService(googletag.pubads()):a[e].slot=googletag.defineSlot(a[e].adunit,a[e].sizes,a[e].placeholder).setTargeting("position",["2"]).addService(googletag.pubads()))}function MavCreateContainerHSEAds(a){var e=document.createElement("div"),i=null,t=1,n=adsConfig.hse,s=a.querySelectorAll(".pages-paragraph"),r=s.length>0?s:a.querySelectorAll(".dt-para p"),o=s.length>0?1:(r.length,4);e.innerHTML='<div class="banner text-gray-400 vh-text-xs p-2 mb-6 -mx-6"><span class="text-center upperase block mb-2">ADVERTISEMENT</span><div class="banner-inner justify-between items-center headline"></div></div><div class="banner text-gray-400 vh-text-xs p-2 -mx-6"><span class="text-center upperase block mb-2">ADVERTISEMENT</span><div class="banner-inner justify-between items-center showcase"></div></div><div class="banner text-gray-400 vh-text-xs p-2 -mx-6"><span class="text-center upperase block mb-2">ADVERTISEMENT</span><div class="banner-inner justify-between items-center exposer"></div></div>',i=e.querySelectorAll("div.banner"),position="afterend",r&&r.forEach((function(a,e){(0==e||!((e+1)%o)&&t<i.length)&&(0==e&&(t=0,position="beforebegin"),i[t].querySelector("div.banner-inner").id=n[t+1].placeholder,a.insertAdjacentElement(position,i[t]),n[t+1].slotCreated=!0,t++)})),isHSEcreated=!0}function showHSEAds(){var a=document.querySelector("section[data-template-id='73'], section[data-template-id='55']"),e=a?adsConfig.hse:{0:adsConfig.hse[0]},i=!1,t=a&&a.querySelector(".bottomframe");for(prop in e)i=null!==document.querySelector(`#${e[prop].placeholder}`),!e[prop].requested&&i&&(googletag.display(e[prop].placeholder),mavRefreshBid(e[prop].adunit,e[prop].slot),e[prop].requested=!0);t&&t.classList.remove("hidden"),t&&t.removeAttribute("style")}function MavPopulateTargetting(){var a,e=pageKlyObj&&pageKlyObj.article,i=pageKlyObj&&pageKlyObj.gtm,t=document.querySelector("section[data-template-id='73'], section[data-template-id='55']"),n="",s=[],r="",o="",l="",d=null!==(document.cookie.split("gamlibLogger")[1]?document.cookie.split("gamlibLogger")[1]:";").split(";")[0].match(/(true)/gi);if(e?(r=gfnFilterString(e.title?e.title:""," "),o=gfnFilterString(e.keywords?e.keywords:""," "),l=gfnFilterString(e.shortDescription?e.shortDescription:""," ")):(r=gfnFilterString(i.pageTitle?i.pageTitle:""," "),o=gfnFilterString(i.keyword?i.keyword:""," "),l=gfnFilterString(i.shortDescription?i.shortDescription:""," ")),null!==t){var u=t.querySelectorAll(".dt-para p");u.length&&(n=Object.entries(u).map((a=>a[1]&&a[1].innerText)).join(""))}o=o.concat(pageDocumentMeta("keywords")),l=l.concat(pageDocumentMeta("description")),a=gfnFilterString(pageKlyObj.gtm.tag?pageKlyObj.gtm.tag:"","|"),n=gfnFilterString(n," ");const p={adult:["adegan erotis","adegan seks","aduhai","adult","affair","air mani","alat bantu seks","alat kelamin","alat kontrasepsi","alat vital pria","alergi","anal","anatomi vagina","anjeng","anjing","anjlng","anjrit","anus","anying","apa itu kondom","artis indonesia bugil","artis porno","ass","asu","ayam hitam","babi","bahaya masturbasi","bajingan","bandar ceme","bangsat","bdsm","bego","belahan","bentuk kelamin","bentuk payudara","bercinta","bercinta saat hamil","bergairah","berhubungan intim","berhubungan seks","berhubungan seksual","bersetubuh","bikini","bintang film porno","bintang porno","biseksual","bitch","bocah sd foto mesum","body shaming","bokne","bokong","bom surabaya 2018","boneka seks","boob","bra","bugil","bullshit","bulshit","bulu kemaluan","bunuh diri","cabul","cara berhubungan intim","cara membuat suami bergairah","cara memperbesar penis","cara mengatasi ejakulasi dini","cara seksual","celana","cemani","cemen","chat firza-rizieq","ciuman","cleavage","cock","cok","cukur bulu kemaluan","cum","dada","death","dewasa","di bawah umur","dick","dildo","diremas","disfungsi ereksi","doggie","doll","drunk","ejakulasi","ejakulasi dini","ejakulasi wanita","eksotik","elo","entot","ereksi","erotic","erotis","ewe","exotic","fakta seks","fase menstruasi","fenomena kelainan seksual","fetish","film dewasa","film porno","foreplay","foto berhubungan intim","foto intim","foto telanjang","fuck","gairah","gairah seks","gairah seksual","gangbang","gangguan jiwa","gangguan seks","ganguan jiwa","ganguan seksual","ganja","gay","gaya bercinta","gaya bercinta dalam islam","gaya bercinta yang disukai pria","gaya seks","gejala penyakit","gemar368","germo","goblok","gue","gwe","hardcore","hasrat seksual","henceut","hindu","hitam mafia","homoseks","horny","hot","hubungan","hubungan intim","hubungan seksual","ibu hamil","implan payudara","industri film porno","intim","itil","jancok","jancuk","jenis alat kontrasepsi","jerawat","jual beli sperma","kacau","kakek cabul","kamasutra","kanibal","kanibalisme","kanker payudara","kapalan","kasus asusila","kebencian","kecanduan seks","kehidupan seks","kekerasan seksual","kelainan seks","kelamin","kelamin wanita","kemaluan","kemaluan wanita","kencing","keperawanan","keriting","kesehatan kulit dan kelamin","kesehatan payudara","kesehatan penis","kesehatan reproduksi","kesehatan wanita","khusus deewasa","kimpet","kisah perselingkuhan","kiss","klitoris","komunitas swinger","kondom","kondom pria","kontol","kontolnya","kontrasepsi","kontroversi hukuman mati","kontroversi lgbt","kotor","kotoran","kristen","kumuh","kursi tantra seks","legalisasi ganja","lemari es","lendir","lesbian","lgbt","libido","lingerie","lolita","lonte","m3m3k","mabuk","mahasiswi","mainan dewasa","mainan perangsang gairah","makanan berbahaya","makanan sehat","masa subur pria","masturbasi","matcont","mature","meki","melakukan hubungan intim","memek","memerkosa","mencukur bulu kemaluan","menggairahkan","menggoda","mengupas","menstruasi","menyiangi","meraba-raba","mesra","mesum","mimpi seks","mimpi telanjang","miss-v","mitos seks","model hot","model seksi","monyet","mr-p","mucikari siswi smp","nakal","naked","naughty","ngentot","ngewe","nipple","nipples","nonok","nude","obat ejakulasi dini","obat kuat","obat pembesar","obat pembesar penis terbaik","onani","oral","oral seks","organ","organ intim wanita","orgasme","orgasme wanita","overdose","overdosis","paha","pakistan","pamer","pantat","panties","payudara","payudara kecil","payudara wanita","pelacur","pelecehan","pelecehan seksual","pembesar penis","pembunuh","pembunuhan","pemerkosaan","pemerkosaan anak","pemuda","pencabulan","penetrasi","penetratif","pengetahuan seks","pengobatan alternatif","penis","penis bengkok","penis besar","penis kecil","penis pria","penyakit sipilis","penyakit vagina","penyimpangan seks","perawan","perawatan vagina","perbudakan","perek","perguruan tinggi","perkosa","perkosaan","permen","perselingkuhan","piss","play boy","pole","porn","porno","pornoaksi","pornografi","posisi bercinta","posisi hubungan intim suami istri menurut islam","posisi seks","posisi seksual","pria dewasa","pria idaman","prostitusi","provokatif","pukang","puki","puting","puting payudara","putting","radikal","raksasa","rangsang payudara","ranjang","rasis","rasisme","razia pasangan mesum","rokok","rudapaksa","rumah bordil","sbobet","seks","seks bebas","seks dalam islam","seks dan agama","seks dan kriminal","seks dan pasutri","seks oral","seks pria dan wanita","seks toy","seksi","seksual","seksual lelaki dan perempuan","seksualitas","seksualitas pria","seksualitas wanita","semen","sensual","seronok","sex","sex toy","sexy","shit","siklus menstruasi","situs poker terpercaya","situs porno","skandal","sperma","stres dan depresi","strip","striptease","striptis","suicide","sundulan","swinger","syur","tai","taik","tamparan","tante seksi","taruhan online","telanjang","telentang","terangsang","teroris","terorisme","tes keperawanan","test pack","testis","tiduri","tips bercinta","tips seks","titik rangsang","titit","toket","tolol","topless","toys","ujian","ukuran normal penis","ukuran penis","ukuran penis normal","ukuran penis orang indonesia","ukuran vagina","vagina","vagina gatal","vagina wanita","vakum pembesar penis","viagra","vibrator","video bercinta dengan pasangan","video porno","video seks","virus corona","vital","wanita telanjang","waria","woman on top","xxx","xxxx online","angry","bastard","blow job","bordil","college","crush","dirty","education","escort","furious","hiburan dewasa","homoseksual","household","lose","meraung","pahlawan wanita","pedofil","pedofilia","rises","rush","Sensitive","sexual","sialan","situs dewasa","spray","tanah amp","teen"],war_politics:["ahed tamimi","ahok gugat cerai veronica tan","aliran sesat","anarkis","anarkisme suporter sepakbola","begal motor","bentrok suporter","bentrokan","bentrokan warga","berita hoax","capres jokowi","capres prabowo","fanatik","ferdy sambo","fpi","g30s","invasi rusia","jemaah ansharut daulah","kebohongan ratna sarumpaet","kediktatoran arab saudi","kekerasan pada wartawan","killing","kisah mualaf","koalisi jokowi","koalisi pilpres 2019","koalisi prabowo","konflik palestina israel","konflik palestina-israel","konflik rusia ukraina","konflik suriah","lia eden","luwu timur","nato","penembakan","penganiayaan","pengawal","pengeroyokan","penistaan agama","perang","perang di ukraina","perang dunia","perang dunia 3","perang rusia","peristiwa","pilpres 2019","polisi","prabowo subianto","prabowo-sandiaga","presiden rusia","presiden ukraina","propaganda rusia","ratna sarumpaet","rokok elektrik","rusia","rusia dan ukraina","rusia serang ukraina","senjata rusia","serang ukraina","serangan","suporter tewas","taliban","tentara","ternyata hoax","ujaran kebencian","ukraina","vladimir putin","tni","jenderal","korupsi","politik","politikus","kpk","kkb","penjajah","berduka","army","corpse","demo","dilempar","ferdi sambo","news","news foto","news readers","politic","politics","polri","Palestina","israel","boikot","yahudi","ajudan","gaza","hamas","perwira","sianida","capres","cawapres","pemilu","ganjar pranowo","mahfud md","gibran rakabuming","anies baswedan","muhaimin iskandar","cak imin","politik","mirna","jessica wongso","makam","ganjar","anies","gibran","anis","presiden","bacapres","prabowo","mahfud","megawati","mk","mahkamah","iriana","firaun","mesir","ham","hak asasi manusia","cpns","militer","amunisi","senjata","senpi","kpu","partai","wapres","menteri","dpr","mrp","mpr","caleg","calon legislatif","anggota dpr","anggota mpr","bupati","wakil bupati","walikota","walkot","anggota dprd","dprd","bawaslu","komcad","cacar","gubernur","wakil gubernur","partai politik","parpol"],drugs_tobacco_alcohol:["adiktif","akibat merokok","alcohol","alkohol","artis narkoba","asap rokok","bahaya berhenti merokok","bahaya merokok","bahaya narkoba","bahaya rokok","bahaya rokok elektrik","berhenti merokok","bnn","cancer","candy","cara berhenti merokok","cbd","ciri ciri pengguna narkoba","dampak merokok","djarum","drugs","efek berhenti merokok","ganja","hash","impotensi","jantung","jenis alkohol","jenis alkohol dalam minuman keras","jenis jenis narkoba","jenis narkotika","kanker","kartel narkoa","kasus narkoba","kecanduan","kesehatan paru","larangan merokok","mafia narkoba","manfaat berhenti merokok","merokok","minuman beralkohol","minuman keras","narkoba","narkoba artis","obat psikotropika","overdosis","pelanggaran","penyalahgunaan narkoba","penyeludupan narkoba","perokok","pot","pppa","rehabilitasi narkoba","remaja narkoba","rokok","rokok elektrik","ruu minuman beralkohol","sabu","selebriti narkoba","sidang narkoba","stroke","tablet","tembakau","tips berhenti merokok","cukai rokok","kokain","puntung"],disaster:["10 macam pencemaran lingkungan","autopsi","bahaya pencemaran udara","bahaya polusi","belasungkawa","bencana","bencana besar","bola","bom","bom atom","bom bali","bom bunuh diri","bom gereja","bom meledak","bom nuklir","bom panci","bom sarinah","bom seks","bunuh orang","cara mencegah global warming","cara mencegah pemanasan global","cara mengatasi pemanasan global","cara mengatasi pemanasan global sebagai pelajar","cara mengatasi pencemaran udara","climate change","contoh pencemaran lingkungan","dampak pencemaran lingkungan","dampak pencemaran udara","darurat bencana","dilaporkan tewas","dimakamkan","dinyatakan meninggal","dipastikan tewas","ditemukan mati","ditemukan tewas","efek rumah kaca","efek rumah kaca adalah","fenomena alam","gas","gas rumah kaca","gempa donggala","gempa palu","gempa sulawesi tengah","global warming","global warming adalah","hilangkan nyawa","hilangnya nyawa","identitas korban","inalillahi","isis","jasad","jasad korban","jasadnya","jenasah wanita","jenazah","jenazah pria","jenazah teridentifikasi","jenis pencemaran lingkungan","kapal tenggelam","kapal tenggelam di danau toba","kasus penebangan pohon","kasus tabrak lari","keadaan kritis","kecelakaan","kecelakaan bus","kehilangan darah","kehilangan hidupnya","kehilangan nyawa","kehilangan nyawanya","kematian","korban","korban jiwa","korban meninggal","korban tewas","kota paling berpolusi","kota paling berpolusi didunia","krisis iklim","kualitas udara","ledakan bom","liga","limbah","limbah pabrik","lion air hilang kontak","lion air jatuh","lion air jatuh di karawang","macam pencemaran lingkungan","mati","mayat","mayat korban","meledak","memakan nyawa","membakar","membunuh","membunuh istrinya","membunuh mereka","membunuh suaminya","menelan nyawa","menemui ajal","menewaskan","menewaskan orang","mengalami koma","mengamuk","mengancam nyawa","menghembuskan nafas terakhir","menimbulkan korban","meninggal","meninggal akibat sakit","meninggal dunia","menyebabkan kematian","meregang nyawa","meregggut nyawa","merenggut jiwa","merenggut nyawa","modar","nyawa hilang","nyawa melayang","nyawa tak tertolong","orang mati","orang tewas","pelayat","pemakaman","pemanasan global","pemanasan global adalah","pembunuhan","pembunuhan sadis","pencemaran","pencemaran air","pencemaran air bersih","pencemaran air laut","pencemaran limbah","pencemaran lingkungan","pencemaran minyak","pencemaran sungai","pencemaran sungai brantas","pencemaran udara","penemuan mayat","pengertian efek rumah kaca","pengertian efek rumah kaca menurut para ahli","pengertian pemanasan global","penyakit polusi udara","penyakit yang disebabkan oleh polusi udara","penyebab efek rumah kaca","penyebab global warming","penyebab kematian","penyebab kerusakan lingkungan","penyebab pemanasan global","penyebab pemanasan global akibat aktivitas manusia","penyebab pencemaran air","penyebab pencemaran udara","penyebab perubahan iklim","penyebab perubahan iklim global","penyebab polusi udara","penyebab terjadinya efek rumah kaca","penyebab terjadinya pemanasan global","penyebab terjadinya pemanasan global dan efek rumah kaca","permintaan maaf","pertandingan","perubahan iklim","perubahan iklim global","pesawat hilang kontak","pesawat jatuh","petugas penyelamat","piala dunia","pollution","polusi","polusi jakarta","polusi udara","polusi udara di jakarta","polutan","renggut nyawa","sampah plastik","sepak","stadion","tak bernyawa","tak sadarkan diri","telah meninggal","telan nyawa","terbunuh","terkapar","teror bom","tewas","tewaskan","tidak bernyawa","timnas","tim penyelamat","trauma","tsunami palu","tutup usia","udara bersih","udara jakarta","wafat","wanita meninggal","won"],epidemic_desease:["corona","corona di indonesia","covid","covid 19","covid-19","doctor","dokter","health","healthy","hospital","infeksi saluran kencing","insomnia dan tidur","kematian","kematian virus","kematian wabah","kesehatan","korban terinfeksi","korona","obesitas","odp","osteoporosis","pdp","penyakit","positif korona","rsud","rumah sakit","sakit pernapasan","sedih","sehat","sesak","terinfeksi virus corona","terjangkit covid-19","terkena","virus","virus corona","virus korona","virus menyerang","virus-corona","wabah","wabah corona","crowd","dead","die","fail","fatal","fire","flu","illness","kanjuruhan","kanker paru paru","kerusuhan","murder","pneumonia","pulau sampah","stampede","tembak","tergeletak","terinjak","tragedi","trigger"],religion:["15lam","abu bakar al-baghdadi","al quran","al-quran","buda","budha","ibrahim al-hashimi al-qurayshi,","injil","isl4m","islam","ismi aisyah","jimat","kafir","katolik","muh4mmad","muhammad","muhammad saw","nabi","yesus","idul fitri","puasa","ramadan","ramadhan"],gambling:["agen poker","agen sbobet","bonus deposit","bonus refferal","bonus rollingan","cashtree","game","judi","minimal deposit","poker","poker online"],parenting:["anak","anak artis","anak cerdas","anak dan balita","anak mandiri","anak selebritis","anak selebritis indonesia","arti nama anak","arti nama bayi","artis bercerai","artis hamil","asi anak","ayah","baby","baby ameena","baby arsy","baby bump","baby bump artis","baby dan balita","baby face","baby gempi","baby leslar","baby shower","baby shower selebritis","baby sitter","baby spa","baby walker","babymoon","babymoon artis","babyologist","baru lahir","bayi","bayi 6 bulan","bayi artis","bayi dan anak","bayi kembar","bayi muntah","bayi pilek","bayi seleb","bayi selebritis","bayi selebritis indonesia","bayi tabung","camilan bayi","cara mengeluarkan dahak pada bayi","child","children","family","father","gaya baby","ibu","ibu anak","induk","jadwal makan bayi","jam tidur bayi","kehamilan","keibuan","kelahiran anak","kelahiran bayi","keluarga","keluarga artis","keluarga bahagia","keluarga dan anak","keluarga harmonis","keluarga penjabat","keluarga seleb","kesehatan bayi","kesehatan bayi dan balita","kesehatan keluarga","kid","masalah anak","mendidik anak","menyusui","mother","mpasi","nama anak","nama anak islam","nama anak kristen","nama anak laki laki","nama anak perempuan","nama anak sansekerta","nama bayi","nama bayi islam","nama bayi kristen","nama bayi laki laki","nama bayi laki laki unik","nama bayi perempuan","nama bayi perempuan unik","nama bayi sansekerta","newborn","orang tua","parent","parenting","pendidikan","penyakit bayi","penyebab bayi muntah","perawatan bayi","perceraian artis","perkembangan janin","perlengkapan bayi","pertumbuhan anak","pijat bayi","remaja","resep mpasi","rumah tangga","school","sekolah","spa baby","tips parenting","ucapan kelahiran","youth"],custom_keys:["ahed tamimi","aliran sesat","anarkis","anarkisme suporter sepakbola","begal motor","bentrok suporter","bentrokan","bentrokan warga","berita hoax","capres jokowi","capres prabowo","fanatik","ferdy sambo","fpi","g30s","invasi rusia","jemaah ansharut daulah","kediktatoran arab saudi","kekerasan pada wartawan","killing","kisah mualaf","koalisi jokowi","koalisi pilpres 2024","koalisi prabowo","konflik palestina israel","konflik palestina-israel","konflik rusia ukraina","konflik suriah","luwu timur","nato","penembakan","penganiayaan","pengawal","pengeroyokan","penistaan agama","perang","perang di ukraina","perang dunia","perang dunia 3","perang rusia","peristiwa","pilpres 2024","prabowo subianto","prabowo-sandiaga","presiden rusia","presiden ukraina","propaganda rusia","ratna sarumpaet","rusia","rusia dan ukraina","rusia serang ukraina","senjata rusia","serang ukraina","serangan","suporter tewas","taliban","tentara","ternyata hoax","ujaran kebencian","ukraina","vladimir putin","korupsi","kpk","kkb","penjajah","berduka","army","corpse","demo","dilempar","ferdi sambo","Palestina","israel","boikot","yahudi","ajudan","gaza","hamas","perwira","sianida","capres","cawapres","pemilu","ganjar pranowo","mahfud md","gibran rakabuming","anies baswedan","muhaimin iskandar","cak imin","mirna","jessica wongso","makam","ganjar","anies","gibran","anis","presiden","bacapres","prabowo","mahfud","megawati","mk","mahkamah","iriana","ham","hak asasi manusia","cpns","militer","amunisi","senjata","senpi","kpu","partai","caleg","calon legislatif","bawaslu","cacar","gubernur","wakil gubernur","partai politik","parpol","calon wakil presiden","calon presiden","amin","pemilihan umum","calon anggota dpr","calon anggota mpr","calon anggota dprd","bacaleg","genosida","genocide","kampanye","blusukan","safari politik"]};for(var g in n=[...new Set(o.concat(r," ",l," ",a," ",n))].join(" "),d&&console.log("siteContentText : ",n),p){var m=p[g];m.length>0&&(matchString=new RegExp("\\b("+m.join("|")+")\\b","ig").exec(n))&&s.push(g)}d&&console.log("bsKeyword : ",s),s.length>0&&(googletag.pubads().setTargeting("bsKeyword",s),googletag.pubads().setTargeting("isMatcont","0"),googletag.pubads().setTargeting("brandsafety","0")),googletag.pubads().setTargeting("tags",a),googletag.pubads().setTargeting("articleTitle",pageKlyObj.gtm.articleTitle),googletag.pubads().setTargeting("articlePath",window.location.pathname),googletag.pubads().setTargeting("platform",pageKlyObj.platform),googletag.pubads().setTargeting("type",pageKlyObj.gtm.type),googletag.pubads().setTargeting("pageType",pageKlyObj.pageType?pageKlyObj.pageType:"Maverick"),googletag.pubads().setTargeting("channel",pageKlyObj.gtm.subCategory),googletag.pubads().setTargeting("audience",void 0===(audience=pageKlyObj.gtm.audience&&pageKlyObj.gtm.audience.split("|"))?"false":audience),googletag.pubads().setTargeting("isAdvertorial",void 0===(isAdvertorial=pageKlyObj.article&&pageKlyObj.article.isAdvertorial.toString())?"false":isAdvertorial),googletag.pubads().setTargeting("articleId",pageKlyObj.gtm.articleId.toString()),googletag.pubads().setTargeting("site",pageKlyObj.site),googletag.pubads().setTargeting("age",void 0===(age=pageKlyObj.gtm.age)?"false":pageKlyObj.gtm.age.toString()),googletag.pubads().setTargeting("gender",void 0===(gender=pageKlyObj.gtm.gender)?"false":pageKlyObj.gtm.gender.toString()),googletag.pubads().setTargeting("subcategory",pageKlyObj.gtm.subCategory);var c=!!(visId=document.cookie.split("ahoy_visitor")[1])&&visId.split(";")[0].replace(/[^a-zA-Z0-9]/gi,"");c&&googletag.pubads().setPublisherProvidedId(c+"kly")}function observeSection(){const a=document.querySelector(".main-body");new MutationObserver(((a,e)=>{for(const e of a)if("childList"===e.type){document.querySelectorAll(".main-body section.snap-always").length;e.nextSibling&&["feed-paging","mvk-feed-early-ajax"].indexOf(e.nextSibling.id)>-1&&mavDefineFeedAdsHatches()}void 0!==e&&"function"==typeof e.unobserve&&e.unobserve(document.querySelectorAll("section[data-section=mobile-billboard], section[data-section=bottom-feedads]"))})).observe(a,{childList:!0})}function mavDefineFeedAdsHatches(){const a=adsConfig.feeds,e=document.querySelectorAll(".main-body section.snap-always:not([data-section=mobile-billboard]):not([data-section=bottom-feedads])");let i=0,t=[];for(var n in e)if("mvk-feed-early-ajax"===e[n].id){i=n;break}t=+i>1?Array.prototype.slice.call(e,0,+i):e;for(var s=0,r=1,o=0,l=t.length;l--;)l<0&&(l=1),t[l].id.match(/gpt-ad-div-section-/gi)&&(o=l,l=1);o>0&&(t=Array.prototype.slice.call(e,o+1,e.length)),Array.prototype.forEach.call(t,((e,i)=>{if(!((i+1)%multiplied)){let i=e.nextElementSibling,t=0;for(const e in a)if(a.hasOwnProperty(e)&&(a[e].slotCreated||(MavCreateContainerAds(e,i),definedFeedSlot(e,1===r),a[e].slotCreated=!0,t++),t==order[s])){let a=s+1;a=order[a]?order[a]:order[0],nextAdsId=minusOneConfig.slice(0,a);for(let e=0;e<a;e++)minusOneConfig.shift();"content-break"===i.dataset.section?i.nextElementSibling&&(i.nextElementSibling.dataset.nextId=nextAdsId.join("|")):i.dataset.nextId=nextAdsId.join("|");break}s++,r++}lastPageOrder=s,s=s==order.length?0:s}))}function MavCreateContainerAds(a,e){targetElID="gpt-ad-div-section-"+a,targetAdsID=targetElID+"-placeholder";var i=document.getElementById(targetElID);if(void 0===i||null==i){let i=document.createElement("section");i.id=targetElID,i.dataset.section="IAB",i.dataset.theme="ads",i.dataset.adsPosition=Math.floor(a/multiplied),i.className="section snap-always snap-start w-full h-full shrink-0 transition bg-white text-white ads-section",i.innerHTML=`<div id="${targetElID}-loader" class="hidden" style="width:24px;height:24px;position:fixed;top:10px;z-index:1;left:50%"><svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#fff" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"><animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"/></path></svg></div><div id="${targetAdsID}" class="placeholder justify-center items-center section-body flex flex-col h-full relative sasa" style="--content:'${adsConfig["sponsored-text"]}'"></div>`,e&&(e.nextElementSibling&&"mvk-feed-early-ajax"===e.nextElementSibling.id?e.nextElementSibling.insertAdjacentElement("beforebegin",i):e.insertAdjacentElement("beforebegin",i),setTimeout((()=>{window.io.observe(i)}),100))}}function MavMakingAdsRequest(a,e){isFirstLoad&&(document.querySelector(".main-body")&&document.querySelector(".main-body").addEventListener("scroll",mainBodyScroller),mavDefineFeedAdsHatches(),observeSection(),isFirstLoad=!1),googletag.cmd.push((function(){const e=adsConfig.feeds;var i=a.dataset.nextId;a.id.match(/gpt-ad-div-section/gi);if(i)for(nextIndex of a.dataset.nextId.split("|"))e[nextIndex=+nextIndex]&&(e[nextIndex].requested||document.querySelector(`#${e[nextIndex].placeholder}`)&&(mavRefreshBid(e[nextIndex].adunit,e[nextIndex].slot),e[nextIndex].requested=!0))}))}function gfnFilterString(a,e){let i=a.replace(/[^A-Za-z0-9]+/gi," ").trim().split(e).map((function(a){return a.trim().toLowerCase()}));return[...new Set(i)]}function pageDocumentMeta(a){var e="",i=document.getElementsByTagName("meta");if(i)for(var t=0,n=i.length;t<n;t++)i[t].name.toLowerCase()==a&&(e+=i[t].content);return gfnFilterString(""!=e?e:""," ")}function mainBodyScroller(){var a=document.querySelector('[data-section="RMB-shrink"].is-visible'),e=document.querySelector(".main-body");(document.cookie.split("gamlibLogger")[1]?document.cookie.split("gamlibLogger")[1]:";").split(";")[0].match(/(true)/gi);a&&(e.scrollTop>a.offsetTop+45?a.classList.add("shrink"):a.classList.remove("shrink"))}function mavInitPrebidAdunits(){const a=adsConfig,e=pageKlyObj.site;if(e!=e){var i=[],t=[];switch(e){case"merdeka.com":i=[{bidder:"rubicon",params:{accountId:12534,siteId:377458,zoneId:2082388}}];break;case"dream.co.id":i=[{bidder:"rubicon",params:{accountId:12534,siteId:377456,zoneId:2082386}}]}for(name in a)if(["feeds","hse","multi"].indexOf(name)>-1){let e=a[name];for(key in e){let a=e[key];a.isPrebidSlot&&t.push({code:a.adunit,mediaTypes:{banner:{sizes:a.sizes}},bids:i})}}pbjs.que.push((function(){pbjs.addAdUnits(t)}))}}function mavRefreshBid(a,e){const i=pageKlyObj.site;i!=i?pbjs.que.push((function(){pbjs.rp.requestBids({callback:function(){googletag.pubads().refresh([e])},gptSlotObjects:[e]})})):googletag.pubads().refresh([e])}window.GAMLibrary={tfIsFixedSized:1,tfAdsVisible:{topframe:!1,topframeClassTweak:!1,topframeScrollBackToTop:!1},tfParentBody:null,tfParentWrapper:null,tfWrapper:null,tfSticky:!1,tfStickyType:null,tfStickyIsEnd:!1,tfStickyLastScroll:0,tfStickyLastScrollEnd:0,tfStickyScrollSpeed:10,tfStickyCountDownV2:0,tfResetStickyCountDownV2:!1,tfStickyTimer:7,tfIsTurnOff:!1,tfDeviceOrientation:window.matchMedia("(orientation: portrait)").matches,tfStickyIsReady:!1,tfStickyAdunitTarget:"#gpt-ad-div-masthead-mvk",tfStickyCustomStyleElement:document.createElement("style"),get tfIncreamentStickyCountDownV2(){this.tfStickyCountDownV2++},tfSetStickyV2Scroll:function(){var a=document.querySelector("section[data-template-id='73'], section[data-template-id='55']");"v8"==this.tfStickyType&&a?(0==document.querySelector(".main-body").scrollTop&&this.tfAdsVisible.topframeClassTweak&&(this.tfAdsVisible.topframeScrollBackToTop=!0,this.tfAdsVisible.topframeClassTweak=!1,this.tfStickyUnsetV2()),document.querySelector(".main-body").scrollTop>document.querySelector(this.tfStickyAdunitTarget).clientHeight/3&&!this.tfAdsVisible.topframeClassTweak&&this.tfIsSticky&&!this.tfStickyIsEnd&&(this.tfAdsVisible.topframeClassTweak=!0,this.tfAdsVisible.topframeScrollBackToTop=!1,this.tfSetSticky(),this.tfResetStickyCountDownV2=!1)):document.querySelector(".main-body").removeEventListener("scroll",this.tfBindSetStickyV2Scroll)},tfSetSticky:function(){document.querySelector(this.tfStickyAdunitTarget).parentElement.classList.add("puller");var a=setInterval(function(){this.tfStickyCountDownV2>=75&&!this.tfStickyIsEnd&&(clearInterval(a),this.tfAdsVisible.topframe=!0,this.tfStickyIsEnd=!0,this.tfStickyUnsetV2()),this.tfAdsVisible.topframeScrollBackToTop||this.tfIncreamentStickyCountDownV2,this.tfResetStickyCountDownV2&&clearInterval(a)}.bind(this),100)},tfStickyUnsetV2:function(){document.querySelector(this.tfStickyAdunitTarget).parentElement.classList.remove("puller"),this.tfStickyIsEnd?(document.querySelector(this.tfStickyAdunitTarget).style.opacity=1,document.querySelector(".main-body").removeEventListener("scroll",this.tfBindSetStickyV2Scroll)):(this.tfStickyCountDownV2=0,this.tfResetStickyCountDownV2=!0)},gamSlotRenderEnded:function(a){var e=a.slot.getSlotElementId(),i=document.getElementById(e);if(e.includes("masthead")&&!this.tfAdsVisible.topframe&&(this.tfBindSetStickyV2Scroll=this.tfSetStickyV2Scroll.bind(this),document.querySelector(".main-body").addEventListener("scroll",this.tfBindSetStickyV2Scroll),setTimeout(function(){this.tfIsSticky||(document.querySelector(".main-body").removeEventListener("scroll",this.tfBindSetStickyV2Scroll),this.tfStickyIsEnd=!0)}.bind(this),2e3)),null!==a.size){var[t,n]=a.size,s=adsConfig.multi;if(300==t&&250==n&&!i.id.match(/(gpt-ad-div-multiads-|gpt-ad-div-showcase-placeholder|gpt-ad-div-exposer-placeholder)/gi)&&"trstd.ly"!==pageKlyObj.site){let e=i.parentElement&&i.parentElement.dataset.adsPosition?i.parentElement.dataset.adsPosition:indexMulti,t=s[e].placeholder,n=i.querySelector("div[id^='google_ads_iframe_']"),r=i.querySelector("div[class^='maverick-in-feeds']"),o=r&&r.querySelector("#iframe-wrapper"),l=(i.querySelector(".article-desc"),`<div class="flex flex-col justify-start section-body h-full max-w-xs"><div class="flex justify-center"><div id="${t}" class="py-2 px-2 bg-black/10 rounded-md"></div></div></div>`);if(r){let a=r.querySelector("img");r.classList.add("flex","flex-col","h-full","justify-end"),a&&a.style.setProperty("padding","unset","important"),o&&o.setAttribute("class","py-2 px-2 bg-black/10 rounded-md relative items-center z-10")}else n&&n.classList.add("flex","flex-col","justify-end","section-body","h-full","max-w-xs"),n&&n.firstChild&&(n.firstChild.classList.add("py-2","px-2","bg-black/10","rounded-md"),n.firstChild.style.setProperty("width","316px"),n.firstChild.style.setProperty("height","266px"),n.setAttribute("style","border: 0pt none;margin: auto;text-align: center;"));null===i.insertAdjacentHTML("beforeend",l)||s[e].slotCreated||(s[e].slot=googletag.defineSlot(s[e].adunit,s[e].sizes,t).setTargeting("prevCampaign",`${a.lineItemId}`).addService(googletag.pubads()),s[e].slot&&!s[e].requested&&(googletag.display(t),mavRefreshBid(s[e].adunit,s[e].slot),s[e].requested=!0),s[e].slotCreated=!0),i.setAttribute("style","gap: 1.5rem;"),indexMulti++}}},counterAhoy:0,get increamentCounterAhoy(){this.counterAhoy++},gamSlotOnLoad:function(a){if("block"==(a.slot.getResponseInformation()?"block":"none")){cdpData={action:"ads_impression",action_details:{slotElementId:a.slot.getSlotElementId(),ResponseInformation:a.slot.getResponseInformation(),sizes:a.slot.getSizes(),adunitPath:a.slot.getAdUnitPath(),outOfPage:a.slot.getOutOfPage()}};let e=setInterval(function(a){if(window.AhoyEvent&&"function"==typeof window.AhoyEvent.sendPersonalizationUserEvent)try{this.consoleLog({text:"AHOY SAVED",variable:[cdpData]}),window.AhoyEvent.sendPersonalizationUserEvent(cdpData),clearInterval(e)}catch(a){this.consoleLog({text:"AHOY FAILED! : "+a,variable:[]}),clearInterval(e)}this.counterAhoy>30&&clearInterval(e),this.increamentCounterAhoy}.bind(this),100)}},pageLogger:{},set consoleToggle(a){document.cookie=`gamlibLogger=${a}`},set showConsole(a){this.pageLogger=a},get showConsole(){null!==(document.cookie.split("gamlibLogger")[1]?document.cookie.split("gamlibLogger")[1]:";").split(";")[0].match(/(true)/gi)&&console.log(this.pageLogger.text,this.pageLogger.variable)},consoleLog:function(a){this.showConsole=a,this.showConsole}},MavInitiateAds();
+  </script>
+  <style>
+      div.masthead-inner.puller {
+         position: fixed;
+         top: 0;
+         z-index: 999;
+         transform: scale(.55) translate(38%, -25%);
+         border-radius: 20px;
+         overflow: hidden;
+         height: unset !important;
+      }
+      
+      div.masthead-inner.puller span.block.vh-text-xs.bg-black-40.text-white.p-2.text-center {
+         display: none;
+      }
+      
+      div.masthead-inner.puller::after {
+         content: "";
+         position: absolute;
+         height: 10px;
+         width: 100%;
+         background: #ff0;
+         left: 0;
+         top: 0;
+         animation: 7s forwards tf-puller-loading
+      }
+      
+      @keyframes tf-puller-loading {
+         0% {
+               width: 0
+         }
+         100% {
+               width: 100%
+         }
+      }
+   </style>
+   <style>
+      .ads-container {
+         display: table
+      }
+      
+      .section-body .banner {
+         background-color: transparent !important;
+      }
+      
+      .ads-container>div {
+         vertical-align: middle;
+         display: table-cell
+      }
+      
+      .ads-container iframe,
+      .showcase,
+      .headline,
+      .exposer {
+         margin: 0 auto;
+      }
+      
+      .headline {
+         width: 320px;
+      }
+      
+      .bottomframe {
+         min-height: 50px;
+         position: sticky;
+         bottom: 0;
+         z-index: 99;
+      }
+      
+      .bottomframe iframe {
+         margin: 0 auto;
+      }
+      
+      .showcase,
+      .exposer {
+         width: 300px;
+      }
+      
+      .masthead {
+         aspect-ratio: auto 48 / 53;
+         background: #333333;
+         background-repeat: no-repeat;
+         background-position: center;
+      }
+      
+      .masthead iframe {
+         position: relative !important;
+      }
+      
+      .placeholder:empty::before {
+         background-color: dimgrey;
+         border-radius: 5px;
+         color: lightgrey;
+         content: "Ad";
+         font: 12px sans-serif;
+         padding: 3px;
+         text-align: center;
+         width: 20px;
+      }
+      
+      .placeholder:empty::after {
+         opacity: 0;
+      }
+      
+      .placeholder:after {
+         content: var(--content,"Iklan - Geser ke atas untuk melanjutkan");
+         --colorset: var(--color-light1);
+         background-color: var(--text-white);
+         font-size: 8px;
+         --tw-text-opacity: 1;
+         color: #444444;
+         font-weight: 600;
+         text-align: center;
+         padding: .5rem;
+         display: block;
+         width: 100%;
+      }
+      
+      @media (min-width: 360px) {
+         .placeholder:after {
+               font-size: 10px;
+         }
+      }
+  
+      /* NEW UPDATE DONI - 09022024 */
+      .masthead-info:after{
+         content: var(--content,"");
+      }
+      /* NEW UPDATE DONI - 09022024 */
+   </style>
+   <style>
+      video.blur-sm~.loader {
+         display: block
+      }
+      
+      .ease {
+         transition-timing-function: ease;
+      }
+      
+      .h-full-2x {
+         height: 150%
+      }
+      
+      .shrink .article {
+         --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.8), var(--tw-gradient-to);
+      }
+      
+      .shrink .article-desc {
+         bottom: 30%;
+      }
+      
+      .shrink .article-desc .btn--ads {
+         --bgcolor-adsActive: var(--color-primary-40);
+         --color-adsActive: var(--color-light1)
+      }
+      
+      .shrink .article-desc .article-title.opacity-0,
+      .shrink .article-desc .article-paragraph.opacity-0,
+      .shrink .article-info {
+         opacity: 1;
+      }
+      
+      .shrink .article-desc .article-paragraph.max-h-0 {
+         max-height: 8rem;
+      }
+      
+      .shrink .video-scale {
+         transform: scale(.8);
+         border-radius: 1em;
+      }
+      
+      .shrink .video-scale img {
+         border-radius: 1em;
+      }
+   </style>
+  <!-- GPT ADS END -->
    </head>
    <body
       class="vh-text-md leading-normal font-primary-1 bg-stone-100 dark:bg-black-40">
