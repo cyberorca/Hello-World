@@ -539,7 +539,7 @@ var adsConfig = {
     'sponsored-text': 'Iklan - Geser ke atas untuk melanjutkan' /* NEW UPDATE DONI - 09022024 */
 };
 
-/* NEW UPDATE DONI - 09022024 */
+/* NEW UPDATE DONI - 09022024 - set only 2 feedads and 1 masthead*/
 //set only 2 feedads and 1 masthead if its on trstd.ly site 
 if ("trstd.ly" === pageKlyObj.site) {
     adsConfig['feeds'] = Object.fromEntries(Object.entries(adsConfig['feeds']).slice(0, 2));
@@ -690,6 +690,7 @@ window.GAMLibrary = {
             var prop = 0;
 
             //trigger multiads if site not trstd.ly with ad size 300x250
+            /* NEW UPDATE DONI - 09022024 && "trstd.ly" !== pageKlyObj.site */
             if (width == 300 && height == 250 && !containerEl.id.match(/(gpt-ad-div-multiads-|gpt-ad-div-showcase-placeholder|gpt-ad-div-exposer-placeholder)/ig) && "trstd.ly" !== pageKlyObj.site) {
                 let position = containerEl.parentElement && containerEl.parentElement.dataset.adsPosition ? containerEl.parentElement.dataset.adsPosition : indexMulti;
                 let containerId = config[position]['placeholder'];
