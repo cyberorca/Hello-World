@@ -9278,9 +9278,9 @@
                 window.trstdly.gtm.set(e)
             }
             let lastSection = i.root.lastChild.previousSibling
-            if (!lastSection.classList ? .contains('done')) {
-                let lastPublishDate = lastSection.querySelector('ins') ? .dataset.publishedDate
-                let lastPublishTime = lastSection.querySelector('ins') ? .dataset.publishedTime
+            if (!lastSection.classList?.contains('done')) {
+                let lastPublishDate = lastSection.querySelector('ins')?.dataset.publishedDate
+                let lastPublishTime = lastSection.querySelector('ins')?.dataset.publishedTime
                 let lastIteration = lastSection.dataset.list
                 lastSection.classList.add('last')
                 if (typeof window.trstdly.detailNextPage !== 'undefined') {
