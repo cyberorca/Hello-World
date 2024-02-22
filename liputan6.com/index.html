@@ -1537,8 +1537,11 @@
                      } else {
                          hlFirstChild.classList.remove("hl-active-sticky")
                          hlFirstChild.classList.remove("hl-navbar-hanging")
+                         hlFirstChild.style.margin = "10px 0 10px 50%";
+                         hlFirstChild.style.transform = "translateX(-50%)";
                          this.hlStickyIsPaused = true
                          this.hlIsSticky = false
+                         console.log("remove hl sticky!")
                      }
                  } else {
                      if (0 >= hlContainerTop) {
@@ -1583,7 +1586,6 @@
                      clearInterval(stickyInterval);
                      hlChild.classList.remove("hl-active-sticky");
                      hlChild.classList.remove("hl-navbar-hanging");
-                     console.log("remove hl sticky!")
                  }
              },
              /** ============ HEADLINE ============ */
