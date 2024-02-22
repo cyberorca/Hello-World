@@ -1537,8 +1537,8 @@
                      } else {
                          hlFirstChild.classList.remove("hl-active-sticky")
                          hlFirstChild.classList.remove("hl-navbar-hanging")
-                         hlFirstChild.style.margin = "10px 0 10px 50%";
-                         hlFirstChild.style.transform = "translateX(-50%)";
+                         hlFirstChild.style.margin = "10px 0 10px 50%"; // new doni
+                         hlFirstChild.style.transform = "translateX(-50%)"; // new doni
                          this.hlStickyIsPaused = true
                          this.hlIsSticky = false
                          console.log("remove hl sticky!")
@@ -1571,8 +1571,8 @@
                          if (0 >= this.hlGetStickyInterval) {
                              hlChild.classList.remove("hl-active-sticky");
                              hlChild.classList.remove("hl-navbar-hanging");
-                             hlChild.style.margin = "10px 0 10px 50%";
-                             hlChild.style.transform = "translateX(-50%)";
+                             hlChild.style.margin = "10px 0 10px 50%"; // new doni
+                             hlChild.style.transform = "translateX(-50%)"; // new doni
                              window.removeEventListener("scroll", this.hlBindScrollEvent)
                              clearInterval(stickyInterval);
          
@@ -2113,8 +2113,11 @@
              ], 'div-gpt-ad-liputan6-dfp-exposer-oop').addService(googletag.pubads());
          
              /* INTERSTITIAL ADS */
-             window.GAMLibrary.interstitial = googletag.defineOutOfPageSlot(GAMLibrary.gamInterstitial, googletag.enums.OutOfPageFormat.INTERSTITIAL);
-             window.GAMLibrary.interstitial ? window.GAMLibrary.interstitial.addService(googletag.pubads()) : '';
+             if(!window.navigator.userAgent.match(/iPhone|iPod|iPad/)){ // doni new
+               window.GAMLibrary.interstitial = googletag.defineOutOfPageSlot(GAMLibrary.gamInterstitial, googletag.enums.OutOfPageFormat.INTERSTITIAL);
+               window.GAMLibrary.interstitial ? window.GAMLibrary.interstitial.addService(googletag.pubads()) : '';
+             }
+
              /* INTERSTITIAL ADS */
          
              googletag.pubads().addEventListener('slotResponseReceived', GAMLibrary.gamSlotResponseReceived.bind(GAMLibrary));
