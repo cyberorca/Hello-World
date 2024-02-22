@@ -1569,6 +1569,10 @@
                              hlChild.classList.remove("hl-active-sticky");
                              hlChild.classList.remove("hl-navbar-hanging");
                              hlChild.style.margin = "10px 0";
+                             hlChild.style.setProperty("transform","translateX(-50%)");
+                             hlChild.style.setProperty("margin-left","50%");
+                             hlChild.style.margin = "10px 0";
+
                              window.removeEventListener("scroll", this.hlBindScrollEvent)
                              clearInterval(stickyInterval);
          
