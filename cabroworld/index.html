@@ -1514,20 +1514,6 @@
             })
         });
 
-        pbjs.setConfig({
-            allowActivities: {
-                accessDevice: {
-                    default: false,
-                    rules: [{
-                        condition(params) {
-                            return params.componentName === 'teads'
-                        },
-                        allow: true
-                    }]
-                }
-            }
-        })
-
         pbjs.que.push(function() {
             pbjs.addAdUnits(adUnits);
             pbjs.requestBids({
