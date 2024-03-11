@@ -1489,75 +1489,75 @@
 
         var googletag = googletag || {};
         googletag.cmd = googletag.cmd || [];
-        googletag.cmd.push(function() {
-            googletag.pubads().disableInitialLoad();
-        });
+        // googletag.cmd.push(function() {
+        //     googletag.pubads().disableInitialLoad();
+        // });
 
-        var pbjs = pbjs || {};
-        pbjs.que = pbjs.que || [];
+        // var pbjs = pbjs || {};
+        // pbjs.que = pbjs.que || [];
 
-        // GDPR INTEGRATION
-        pbjs.que.push(function() {
-            var CMP_TIMEOUT = 5000;
-            var consentManagement = {
-                gdpr: {
-                    cmpApi: 'iab',
-                    timeout: CMP_TIMEOUT,
-                    defaultGdprScope: true // TCF 2.0 & PBJS v4+
-                },
-                usp: {
-                    cmpApi: 'iab',
-                    timeout: CMP_TIMEOUT
-                }
-            }
+        // // GDPR INTEGRATION
+        // pbjs.que.push(function() {
+        //     var CMP_TIMEOUT = 5000;
+        //     var consentManagement = {
+        //         gdpr: {
+        //             cmpApi: 'iab',
+        //             timeout: CMP_TIMEOUT,
+        //             defaultGdprScope: true // TCF 2.0 & PBJS v4+
+        //         },
+        //         usp: {
+        //             cmpApi: 'iab',
+        //             timeout: CMP_TIMEOUT
+        //         }
+        //     }
 
-            if (typeof __tcfapi !== 'function') {
-                delete consentManagement.gdpr;
-            }
+        //     if (typeof __tcfapi !== 'function') {
+        //         delete consentManagement.gdpr;
+        //     }
 
-            pbjs.setConfig({
-                consentManagement
-            })
-        });
+        //     pbjs.setConfig({
+        //         consentManagement
+        //     })
+        // });
 
-        pbjs.que.push(function() {
-            pbjs.addAdUnits(adUnits);
-            pbjs.requestBids({
-                bidsBackHandler: function() {
-                    initAdserverForSlot(cabroLib.div_1);
-                    initAdserverForSlot(cabroLib.div_2);
-                    initAdserverForSlot(cabroLib.div_3);
-                    // initAdserver();
-                },
-                timeout: PREBID_TIMEOUT
-            });
-        });
+        // pbjs.que.push(function() {
+        //     pbjs.addAdUnits(adUnits);
+        //     pbjs.requestBids({
+        //         bidsBackHandler: function() {
+        //             initAdserverForSlot(cabroLib.div_1);
+        //             initAdserverForSlot(cabroLib.div_2);
+        //             initAdserverForSlot(cabroLib.div_3);
+        //             // initAdserver();
+        //         },
+        //         timeout: PREBID_TIMEOUT
+        //     });
+        // });
 
-        function initAdserverForSlot(slot) {
-            googletag.cmd.push(function() {
-                pbjs.que.push(function() {
-                    pbjs.setTargetingForGPTAsync();
-                    googletag.display(slot.id);
-                    googletag.pubads().refresh([slot.definedSlot]);
-                });
-            });
-        }
+        // function initAdserverForSlot(slot) {
+        //     googletag.cmd.push(function() {
+        //         pbjs.que.push(function() {
+        //             pbjs.setTargetingForGPTAsync();
+        //             googletag.display(slot.id);
+        //             googletag.pubads().refresh([slot.definedSlot]);
+        //         });
+        //     });
+        // }
 
-        function initAdserver() {
-            if (pbjs.initAdserverSet) return;
-            pbjs.initAdserverSet = true;
-            googletag.cmd.push(function() {
-                pbjs.que.push(function() {
-                    pbjs.setTargetingForGPTAsync();
-                    googletag.pubads().refresh();
-                });
-            });
-        }
+        // function initAdserver() {
+        //     if (pbjs.initAdserverSet) return;
+        //     pbjs.initAdserverSet = true;
+        //     googletag.cmd.push(function() {
+        //         pbjs.que.push(function() {
+        //             pbjs.setTargetingForGPTAsync();
+        //             googletag.pubads().refresh();
+        //         });
+        //     });
+        // }
 
-        // in case PBJS doesn't load
-        setTimeout(function() {
-            initAdserver();
-        }, FAILSAFE_TIMEOUT);
+        // // in case PBJS doesn't load
+        // setTimeout(function() {
+        //     initAdserver();
+        // }, FAILSAFE_TIMEOUT);
 
         googletag.cmd.push(function() {
             cabroLib.div_1.definedSlot = googletag.defineSlot(cabroLib.div_1.slot, cabroLib.div_1.sizes, cabroLib.div_1.id).addService(googletag.pubads());
