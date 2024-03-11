@@ -1523,27 +1523,29 @@
         pbjs.que.push(function() {
             pbjs.addAdUnits(adUnits);
             pbjs.requestBids({
-                bidsBackHandler: initAdserverForSlot,
+                bidsBackHandler: initAdserver,
                 timeout: PREBID_TIMEOUT
             });
         });
 
-        function initAdserverForSlot() {
-            googletag.cmd.push(function() {
-                pbjs.que.push(function() {
-                    pbjs.setTargetingForGPTAsync([cabroLib.div_1.id,cabroLib.div_2.id,cabroLib.div_3.id]);
-                    googletag.pubads().refresh([cabroLib.div_1.definedSlot,cabroLib.div_2.definedSlot,cabroLib.div_3.definedSlot]);
-                });
-            });
-        }
+        // function initAdserverForSlot() {
+        //     if (pbjs.initAdserverSet) return;
+        //     pbjs.initAdserverSet = true;
+        //     googletag.cmd.push(function() {
+        //         pbjs.que.push(function() {
+        //             pbjs.setTargetingForGPTAsync([cabroLib.div_1.id,cabroLib.div_2.id,cabroLib.div_3.id]);
+        //             googletag.pubads().refresh([cabroLib.div_1.definedSlot,cabroLib.div_2.definedSlot,cabroLib.div_3.definedSlot]);
+        //         });
+        //     });
+        // }
 
         function initAdserver() {
             if (pbjs.initAdserverSet) return;
             pbjs.initAdserverSet = true;
             googletag.cmd.push(function() {
                 pbjs.que.push(function() {
-                    pbjs.setTargetingForGPTAsync();
-                    googletag.pubads().refresh();
+                    pbjs.setTargetingForGPTAsync([cabroLib.div_1.id,cabroLib.div_2.id,cabroLib.div_3.id]);
+                    googletag.pubads().refresh([cabroLib.div_1.definedSlot,cabroLib.div_2.definedSlot,cabroLib.div_3.definedSlot]);
                 });
             });
         }
