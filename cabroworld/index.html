@@ -1491,28 +1491,42 @@
         pbjs.que = pbjs.que || [];
 
         // GDPR INTEGRATION
-        // pbjs.que.push(function() {
-        //     var CMP_TIMEOUT = 5000;
-        //     var consentManagement = {
-        //         gdpr: {
-        //             cmpApi: 'iab',
-        //             timeout: CMP_TIMEOUT,
-        //             defaultGdprScope: true // TCF 2.0 & PBJS v4+
-        //         },
-        //         usp: {
-        //             cmpApi: 'iab',
-        //             timeout: CMP_TIMEOUT
-        //         }
-        //     }
+        pbjs.que.push(function() {
+            var CMP_TIMEOUT = 5000;
+            var consentManagement = {
+                gdpr: {
+                    cmpApi: 'iab',
+                    timeout: CMP_TIMEOUT,
+                    defaultGdprScope: true // TCF 2.0 & PBJS v4+
+                },
+                usp: {
+                    cmpApi: 'iab',
+                    timeout: CMP_TIMEOUT
+                }
+            }
 
-        //     if (typeof __tcfapi !== 'function') {
-        //         delete consentManagement.gdpr;
-        //     }
+            if (typeof __tcfapi !== 'function') {
+                delete consentManagement.gdpr;
+            }
 
-        //     pbjs.setConfig({
-        //         consentManagement
-        //     })
-        // });
+            pbjs.setConfig({
+                consentManagement
+            })
+        });
+
+        pbjs.setConfig({
+            allowActivities: {
+                accessDevice: {
+                    default: false,
+                    rules: [{
+                        condition(params) {
+                            return params.componentName === 'teads'
+                        },
+                        allow: true
+                    }]
+                }
+            }
+        })
 
         pbjs.que.push(function() {
             pbjs.addAdUnits(adUnits);
