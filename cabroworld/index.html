@@ -309,7 +309,7 @@
             padding: .375em .625em
         }
         
-        :where(.wp-block-group.has-background) {
+         :where(.wp-block-group.has-background) {
             padding: 1.25em 2.375em
         }
         
@@ -453,11 +453,11 @@
             --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
         }
         
-        :where(.is-layout-flex) {
+         :where(.is-layout-flex) {
             gap: 0.5em;
         }
         
-        :where(.is-layout-grid) {
+         :where(.is-layout-grid) {
             gap: 0.5em;
         }
         
@@ -526,19 +526,19 @@
             margin: 0;
         }
         
-        :where(.wp-block-columns.is-layout-flex) {
+         :where(.wp-block-columns.is-layout-flex) {
             gap: 2em;
         }
         
-        :where(.wp-block-columns.is-layout-grid) {
+         :where(.wp-block-columns.is-layout-grid) {
             gap: 2em;
         }
         
-        :where(.wp-block-post-template.is-layout-flex) {
+         :where(.wp-block-post-template.is-layout-flex) {
             gap: 1.25em;
         }
         
-        :where(.wp-block-post-template.is-layout-grid) {
+         :where(.wp-block-post-template.is-layout-grid) {
             gap: 1.25em;
         }
         
@@ -754,19 +754,19 @@
             color: inherit;
         }
         
-        :where(.wp-block-post-template.is-layout-flex) {
+         :where(.wp-block-post-template.is-layout-flex) {
             gap: 1.25em;
         }
         
-        :where(.wp-block-post-template.is-layout-grid) {
+         :where(.wp-block-post-template.is-layout-grid) {
             gap: 1.25em;
         }
         
-        :where(.wp-block-columns.is-layout-flex) {
+         :where(.wp-block-columns.is-layout-flex) {
             gap: 2em;
         }
         
-        :where(.wp-block-columns.is-layout-grid) {
+         :where(.wp-block-columns.is-layout-grid) {
             gap: 2em;
         }
         
@@ -1382,7 +1382,190 @@
     </script>
     <!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
 
+    <script>
+        window.cabroLib = {};
+        window.cabroLib = {
+            div_1: {
+                id: "div-gpt-ad-ad1",
+                slot: "/112750292/Prebid_banner_1x1_ad1",
+                sizes: [
+                    [1, 1]
+                ],
+                definedSlot: null,
+            },
+            div_2: {
+                id: "div-gpt-ad-ad2",
+                slot: "/112750292/Prebid_banner_1x1_ad2",
+                sizes: [
+                    [1, 1]
+                ],
+                definedSlot: null,
+            },
+            div_3: {
+                slot: "/112750292/Prebid_banner_300x600_ad1",
+                sizes: [
+                    [300, 600]
+                ],
+                definedSlot: null,
+            }
+        };
 
+
+        var PREBID_TIMEOUT = 1000;
+        var FAILSAFE_TIMEOUT = 3000;
+
+        var adUnits = [{
+            code: cabroLib.div_1.id,
+            mediaTypes: {
+                banner: {
+                    sizes: cabroLib.div_1.sizes
+                }
+            },
+            bids: [{
+                bidder: 'invibes',
+                params: {
+                    placementId: 'invibes_cabroworld',
+                    customEndpoint: 'https://bid3.videostep.com/Bid/VideoAdContent'
+                }
+            }, {
+                bidder: 'teads',
+                params: {
+                    placementId: 152410,
+                    pageId: 138900
+                }
+            }]
+        }, {
+            code: cabroLib.div_2.id,
+            mediaTypes: {
+                banner: {
+                    sizes: cabroLib.div_2.sizes
+                }
+            },
+            bids: [{
+                bidder: 'invibes',
+                params: {
+                    placementId: 'invibes_cabroworld2',
+                    customEndpoint: 'https://bid3.videostep.com/Bid/VideoAdContent'
+                }
+            }, {
+                bidder: 'teads',
+                params: {
+                    placementId: 152410,
+                    pageId: 138900
+                }
+            }]
+        }, {
+            code: cabroLib.div_3.id,
+            mediaTypes: {
+                banner: {
+                    sizes: cabroLib.div_3.sizes
+                }
+            },
+            bids: [{
+                bidder: 'teads',
+                params: {
+                    placementId: 152410,
+                    pageId: 138900
+                }
+            }, {
+                bidder: 'smartadserver',
+                params: {
+                    networkId: 2807,
+                    pageId: 1033781,
+                    siteId: 279311,
+                    formatId: 73131,
+                    tagId: "sas_73131",
+                    domain: "https://www8.smartadserver.com"
+                }
+            }, {
+                bidder: 'richaudience',
+                params: {
+                    pid: "u4E0SOttPZ",
+                    supplyType: "site"
+                }
+            }]
+        }];
+
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        googletag.cmd.push(function() {
+            googletag.pubads().disableInitialLoad();
+        });
+
+        var pbjs = pbjs || {};
+        pbjs.que = pbjs.que || [];
+
+        // GDPR INTEGRATION
+        pbjs.que.push(function() {
+            var CMP_TIMEOUT = 5000;
+            var consentManagement = {
+                gdpr: {
+                    cmpApi: 'iab',
+                    timeout: CMP_TIMEOUT,
+                    defaultGdprScope: true // TCF 2.0 & PBJS v4+
+                },
+                usp: {
+                    cmpApi: 'iab',
+                    timeout: CMP_TIMEOUT
+                }
+            }
+
+            if (typeof __tcfapi !== 'function') {
+                delete consentManagement.gdpr;
+            }
+
+            pbjs.setConfig({
+                consentManagement
+            })
+        });
+
+        pbjs.que.push(function() {
+            pbjs.addAdUnits(adUnits);
+            pbjs.requestBids({
+                bidsBackHandler: function() {
+                    initAdserverForSlot(cabroLib.div_1);
+                    initAdserverForSlot(cabroLib.div_2);
+                    initAdserverForSlot(cabroLib.div_3);
+                    initAdserver();
+                },
+                timeout: PREBID_TIMEOUT
+            });
+        });
+
+        function initAdserverForSlot(slot) {
+            googletag.cmd.push(function() {
+                pbjs.que.push(function() {
+                    pbjs.setTargetingForGPTAsync();
+                    googletag.display(slot.id);
+                    googletag.pubads().refresh([slot.defineSlot]);
+                });
+            });
+        }
+
+        function initAdserver() {
+            if (pbjs.initAdserverSet) return;
+            pbjs.initAdserverSet = true;
+            googletag.cmd.push(function() {
+                pbjs.que.push(function() {
+                    pbjs.setTargetingForGPTAsync();
+                    googletag.pubads().refresh();
+                });
+            });
+        }
+
+        // in case PBJS doesn't load
+        setTimeout(function() {
+            initAdserver();
+        }, FAILSAFE_TIMEOUT);
+
+        googletag.cmd.push(function() {
+            cabroLib.div_1.definedSlot = googletag.defineSlot(cabroLib.div_1.slot, cabroLib.div_1.sizes, cabroLib.div_1.id).addService(googletag.pubads());
+            cabroLib.div_2.definedSlot = googletag.defineSlot(cabroLib.div_2.slot, cabroLib.div_2.sizes, cabroLib.div_2.id).addService(googletag.pubads());
+            cabroLib.div_3.definedSlot = googletag.defineSlot(cabroLib.div_3.slot, cabroLib.div_3.sizes, cabroLib.div_3.id).addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
 </head>
 
 <body class="post-template-default single single-post postid-456101 single-format-standard wp-custom-logo wp-embed-responsive unselectable has-sidebar has-sticky-nav has-sticky-nav-mobile has-post-nav has-author-bio has-backtotop has-tfm-breadcrumbs has-tfm-author-social">
@@ -1442,8 +1625,7 @@
 
                 <div class="site-logo faux-heading">
                     <a href="https://cabroworld.com" rel="home"><img data-cfsrc="https://cabroworld.com/wp-content/uploads/2023/03/cropped-cabroworld_logo_web.png" alt="CABROWORLD" class="custom-logo" width="200" style="display:none;visibility:hidden;" /><noscript><img src="https://cabroworld.com/wp-content/uploads/2023/03/cropped-cabroworld_logo_web.png" alt="CABROWORLD" class="custom-logo" width="200" /></noscript></a>
-                    <span
-                        class="screen-reader-text">CABROWORLD</span>
+                    <span class="screen-reader-text">CABROWORLD</span>
                 </div>
             </div>
 
@@ -1497,12 +1679,11 @@
         <div class="tfm-breadcrumbs-inner"><span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Ir a CABROWORLD." href="https://cabroworld.com" class="home" ><span property="name">CABROWORLD</span></a>
             <meta property="position" content="1">
             </span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to the Viral Categoría archives." href="https://cabroworld.com/category/viral/" class="taxonomy category" ><span property="name">Viral</span></a>
-            <meta
-                property="position" content="2">
-                </span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name" class="post post-post current-item">El vídeo del primer vuelo del AirCar, el primer coche volador</span>
-                <meta property="url" content="https://cabroworld.com/2020/11/19/primer-vuelo-aircar-volador/">
-                <meta property="position" content="3">
-                </span>
+            <meta property="position" content="2">
+            </span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name" class="post post-post current-item">El vídeo del primer vuelo del AirCar, el primer coche volador</span>
+            <meta property="url" content="https://cabroworld.com/2020/11/19/primer-vuelo-aircar-volador/">
+            <meta property="position" content="3">
+            </span>
         </div>
     </div>
 
@@ -1512,8 +1693,7 @@
         <div class="toggle-sidebar-header">
             <div class="site-logo faux-heading">
                 <a href="https://cabroworld.com" rel="home"><img data-cfsrc="https://cabroworld.com/wp-content/uploads/2023/03/cabroworld_logo_web.png" alt="CABROWORLD" class="custom-logo" width="150" style="display:none;visibility:hidden;" /><noscript><img src="https://cabroworld.com/wp-content/uploads/2023/03/cabroworld_logo_web.png" alt="CABROWORLD" class="custom-logo" width="150" /></noscript></a>
-                <span
-                    class="screen-reader-text">CABROWORLD</span>
+                <span class="screen-reader-text">CABROWORLD</span>
             </div>
             <div class="close-menu"><span><i class="icon-cancel"></i></span><span class="close">close</span></div>
         </div>
@@ -1721,197 +1901,30 @@
                                             /><noscript><img decoding="async" class="size-full wp-image-449281 aligncenter" src="https://www.cabroworld.com/wp-content/uploads/2020/11/aircar-de-klein-vision-5.jpg" alt="" width="800" height="449" /></noscript></p>
                                         <p style="text-align: justify;">
                                             <div class='code-block code-block-84' style='margin: 8px auto; text-align: center; display: block; clear: both;'>
-                                                <script>
-                                                    var div_1_sizes = [
-                                                        [1, 1]
-                                                    ];
-                                                    var div_2_sizes = [
-                                                        [1, 1]
-                                                    ];
-                                                    var div_3_sizes = [
-                                                        [300, 600]
-                                                    ];
 
-                                                    var PREBID_TIMEOUT = 8000;
-                                                    var FAILSAFE_TIMEOUT = 15000;
-
-                                                    var adUnits = [{
-                                                        code: 'div-gpt-ad-1709722213322-0',
-                                                        mediaTypes: {
-                                                            banner: {
-                                                                sizes: div_1_sizes
-                                                            }
-                                                        },
-                                                        bids: [{
-                                                            bidder: 'invibes',
-                                                            params: {
-                                                                placementId: 'invibes_cabroworld',
-                                                                customEndpoint: 'https://bid3.videostep.com/Bid/VideoAdContent'
-                                                            }
-                                                        }, {
-                                                            bidder: 'teads',
-                                                            params: {
-                                                                placementId: 152410,
-                                                                pageId: 138900
-                                                            }
-                                                        }]
-                                                    }, {
-                                                        code: 'div-gpt-ad-1709722322331-0',
-                                                        mediaTypes: {
-                                                            banner: {
-                                                                sizes: div_2_sizes
-                                                            }
-                                                        },
-                                                        bids: [{
-                                                            bidder: 'invibes',
-                                                            params: {
-                                                                placementId: 'invibes_cabroworld2',
-                                                                customEndpoint: 'https://bid3.videostep.com/Bid/VideoAdContent'
-                                                            }
-                                                        }, {
-                                                            bidder: 'teads',
-                                                            params: {
-                                                                placementId: 152410,
-                                                                pageId: 138900
-                                                            }
-                                                        }]
-                                                    }, {
-                                                        code: 'div-gpt-ad-1709809847588-0',
-                                                        mediaTypes: {
-                                                            banner: {
-                                                                sizes: div_3_sizes
-                                                            }
-                                                        },
-                                                        bids: [{
-                                                            bidder: 'teads',
-                                                            params: {
-                                                                placementId: 152410,
-                                                                pageId: 138900
-                                                            }
-                                                        }, {
-                                                            bidder: 'smartadserver',
-                                                            params: {
-                                                                networkId: 2807,
-                                                                pageId: 1033781,
-                                                                siteId: 279311,
-                                                                formatId: 73131,
-                                                                tagId: "sas_73131",
-                                                                domain: "https://www8.smartadserver.com"
-                                                            }
-                                                        }, {
-                                                            bidder: 'richaudience',
-                                                            params: {
-                                                                pid: "u4E0SOttPZ",
-                                                                supplyType: "site"
-                                                            }
-                                                        }]
-                                                    }];
-
-                                                    var googletag = googletag || {};
-                                                    googletag.cmd = googletag.cmd || [];
-                                                    googletag.cmd.push(function() {
-                                                        googletag.pubads().disableInitialLoad();
-                                                    });
-
-                                                    var pbjs = pbjs || {};
-                                                    pbjs.que = pbjs.que || [];
-
-                                                    // GDPR INTEGRATION
-                                                    pbjs.que.push(function() {
-                                                        var CMP_TIMEOUT = 5000;
-                                                        var consentManagement = {
-                                                            gdpr: {
-                                                                cmpApi: 'iab',
-                                                                timeout: CMP_TIMEOUT,
-                                                                defaultGdprScope: true // TCF 2.0 & PBJS v4+
-                                                            },
-                                                            usp: {
-                                                                cmpApi: 'iab',
-                                                                timeout: CMP_TIMEOUT
-                                                            }
-                                                        }
-
-                                                        if (typeof __tcfapi !== 'function') {
-                                                            delete consentManagement.gdpr;
-                                                        }
-
-                                                        pbjs.setConfig({
-                                                            consentManagement
-                                                        })
-                                                    });
-
-                                                    pbjs.que.push(function() {
-                                                        pbjs.addAdUnits(adUnits);
-                                                        pbjs.requestBids({
-                                                            bidsBackHandler: function() {
-                                                                initAdserverForSlot('div-gpt-ad-1709722213322-0');
-                                                                initAdserverForSlot('div-gpt-ad-1709722322331-0');
-                                                                initAdserverForSlot('div-gpt-ad-1709809847588-0');
-                                                                initAdserver();
-                                                            },
-                                                            timeout: PREBID_TIMEOUT
-                                                        });
-                                                    });
-
-                                                    function initAdserverForSlot(slot) {
-                                                        googletag.cmd.push(function() {
-                                                            pbjs.que.push(function() {
-                                                                pbjs.setTargetingForGPTAsync();
-                                                                googletag.display(slot);
-                                                                googletag.pubads().refresh([slot]);
-                                                            });
-                                                        });
-                                                    }
-
-                                                    function initAdserver() {
-                                                        if (pbjs.initAdserverSet) return;
-                                                        pbjs.initAdserverSet = true;
-                                                        googletag.cmd.push(function() {
-                                                            pbjs.que.push(function() {
-                                                                pbjs.setTargetingForGPTAsync();
-                                                                googletag.pubads().refresh();
-                                                            });
-                                                        });
-                                                    }
-
-                                                    // in case PBJS doesn't load
-                                                    setTimeout(function() {
-                                                        initAdserver();
-                                                    }, FAILSAFE_TIMEOUT);
-                                                </script>
-
-                                                <script>
-                                                    googletag.cmd.push(function() {
-                                                        googletag.defineSlot('/112750292/Prebid_banner_1x1_ad1', [1, 1], 'div-gpt-ad-1709722213322-0').addService(googletag.pubads());
-                                                        googletag.defineSlot('/112750292/Prebid_banner_1x1_ad2', [1, 1], 'div-gpt-ad-1709722322331-0').addService(googletag.pubads());
-                                                        googletag.defineSlot('/112750292/Prebid_banner_300x600_ad1', div_3_sizes, 'div-gpt-ad-1709809847588-0').addService(googletag.pubads());
-                                                        googletag.pubads().enableSingleRequest();
-                                                        googletag.enableServices();
-                                                    });
-                                                </script>
 
                                                 <h2>PREBID - AD1 - 1x1</h2>
-                                                <div id='div-gpt-ad-1709722213322-0' style='min-width: 300px; min-height: 250px;'>
+                                                <div id='div-gpt-ad-ad1' style='min-width: 300px; min-height: 250px;'>
                                                     <script>
                                                         googletag.cmd.push(function() {
-                                                            googletag.display('div-gpt-ad-1709722213322-0');
+                                                            googletag.display('div-gpt-ad-ad1');
                                                         });
                                                     </script>
                                                 </div>
 
                                                 <h2>PREBID - AD2 - 1x1</h2>
-                                                <div id='div-gpt-ad-1709722322331-0' style='min-width: 300px; min-height: 250px;'>
+                                                <div id='div-gpt-ad-ad2' style='min-width: 300px; min-height: 250px;'>
                                                     <script>
                                                         googletag.cmd.push(function() {
-                                                            googletag.display('div-gpt-ad-1709722322331-0');
+                                                            googletag.display('div-gpt-ad-ad2');
                                                         });
                                                     </script>
                                                 </div>
                                                 <h2>PREBID - AD3 - 300x600</h2>
-                                                <div id='div-gpt-ad-1709809847588-0' style='min-width: 300px; min-height: 250px;'>
+                                                <div id='div-gpt-ad-ad3' style='min-width: 300px; min-height: 250px;'>
                                                     <script>
                                                         googletag.cmd.push(function() {
-                                                            googletag.display('div-gpt-ad-1709809847588-0');
+                                                            googletag.display('div-gpt-ad-ad3');
                                                         });
                                                     </script>
                                                 </div>
