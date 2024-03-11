@@ -1412,8 +1412,8 @@
         };
 
 
-        var PREBID_TIMEOUT = 1000;
-        var FAILSAFE_TIMEOUT = 3000;
+        var PREBID_TIMEOUT = 8000;
+        var FAILSAFE_TIMEOUT = 15000;
 
         var adUnits = [{
             code: cabroLib.div_1.id,
@@ -1498,7 +1498,7 @@
 
         // GDPR INTEGRATION
         pbjs.que.push(function() {
-            var CMP_TIMEOUT = 500;
+            var CMP_TIMEOUT = 5000;
             var consentManagement = {
                 gdpr: {
                     cmpApi: 'iab',
