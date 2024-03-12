@@ -1517,6 +1517,10 @@
         // });
             console.log("ADUNITS : ",adUnits)
         pbjs.que.push(function() {
+            pbjs.setConfig({
+                enableTIDs:false
+            })
+
             pbjs.addAdUnits(adUnits);
             pbjs.requestBids({
                 bidsBackHandler: initAdserver,
