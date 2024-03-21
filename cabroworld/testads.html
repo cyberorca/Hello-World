@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Account: Kapanlagi Site: KLY Outstream Mobile Zone: KLY Outstream Mobile Preroll Format: Outstream in-article (Video) -->
+    <script defer src="https://video-outstream.rubiconproject.com/apex.js"></script>
+    <script type="text/javascript">
+        function __magnite_apex_render_ad() {
+            MagniteApex.renderAd({
+                magnite: {
+                    account_id: 12534,
+                    site_id: 473536,
+                    zone_id: 2809764,
+                    size_id: 203
+                },
+                width: 640,
+                height: 360,
+                placement: {
+                    attachTo: "top",
+                    position: "after",
+                    align: "center"
+                },
+                k_passback: "myPassback",
+                collapse: true,
+                closeButton: true
+            });
+        }
+
+        // Begin passback function //
+        top.window.myPassback = function(passbackContainer) {
+                // insert callback function here
+                console.log("Call passback", passbackContainer);
+                var passbackCode = '<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"><' + '\/script>\n<div id="gpt-passback">\n  <script>\n    window.googletag = window.googletag || {cmd: []};\n    googletag.cmd.push(function() {\n    googletag.defineSlot("/36504930/PASSBACK/MOBILE/MAGNITE", [320, 50], "gpt-passback").addService(googletag.pubads()).setTargeting("passback", ["magnite_tag-2809764"]);\n    googletag.enableServices();\n    googletag.display("gpt-passback");\n    });\n  <' + '\/script>\n<\/div>';
+
+                if (passbackContainer) {
+                    var scrpt = window.top.document.createElement('script');
+                    scrpt.type = 'text/javascript';
+                    scrpt.src = 'https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.6/postscribe.min.js';
+                    scrpt.onload = function() {
+                        window.top.postscribe(passbackContainer, passbackCode, {
+                            done: function() {
+                                console.log('Passback has been added');
+                            }
+                        });
+                    };
+                    passbackContainer.parentNode.insertBefore(scrpt, passbackContainer);
+                }
+            }
+            // end passback function //
+
+        if (document.readyState === "complete") {
+            __magnite_apex_render_ad();
+        } else {
+            document.addEventListener("DOMContentLoaded", __magnite_apex_render_ad);
+        }
+    </script>
+</body>
+
+</html>
