@@ -1416,6 +1416,9 @@
              /*====== in IMAGE ======*/
              inImageAdsInject: function() {
                  var inImageTargetWrapper = document.querySelectorAll(".article-content-body__item")[1];
+
+                 if(!inImageTargetWrapper) return;
+
                  var inImageTargetImageWrapper = inImageTargetWrapper.querySelector(".article-photo-gallery--item")
                  var inImageTargetImage = inImageTargetWrapper.querySelector(".article-photo-gallery--item__content")
                  var inImageTargetTitle = inImageTargetWrapper.querySelector(".article-content-body__item-title")
