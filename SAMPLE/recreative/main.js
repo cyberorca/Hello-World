@@ -2,49 +2,7 @@
 (function(h, x, n) {
     function Z() {
         aa();
-        O && (h.addEventListener("scroll", F),
-        h.addEventListener("message", function(a) {
-            try {
-                var b = a.data,
-                    d = b.act;
-                if ("init" == d)
-                    P = a.source,
-                    ba(b);
-                else if ("height" == d)
-                    r.forEach(function(c) {
-                        c.wnd == a.source && (p(c.iframe, "height", b.height + "px"),
-                            w(c))
-                    });
-                else if ("style" == d)
-                    r.forEach(function(c) {
-                        if (c.wnd == a.source) {
-                            for (var f in b.style)
-                                p(c.target, f, b.style[f]);
-                            b.ex && (f = x.createElement("script"));
-                            w(c)
-                        }
-                    });
-                else if ("bdload" == d)
-                    "end" == b.sub && (t = b.cache,
-                        Q(),
-                        ca(b.cs),
-                        G(a.source)),
-                    "beg" == b.sub && (u.push({
-                            src: a.source,
-                            ms: b.ms
-                        }),
-                        G());
-                else if ("bimp" == d) {
-                    var e = b.tzd + b.sid;
-                    A[e] = A[e] || 0;
-                    A[e]++;
-                    a.source.postMessage({
-                        act: "bimp",
-                        bimp: b.bimp + ":" + A[e]
-                    }, n)
-                }
-            } catch (c){/** test */};
-        }, !0));
+        O && (h.addEventListener("scroll", F));
         ea();
         return {}
     }
@@ -63,45 +21,11 @@
         a.head ? a.head.appendChild(b) : a.body.appendChild(b)
     }
 
-    function G(a) {
-        if (a) {
-            var b = [];
-            u.forEach(function(e) {
-                e.src != a && b.push(e)
-            });
-            u = b;
-        } else
-            u.length && !u.some(e => e.beg) && (d = u[0],
-                d.beg = !0,
-                d.src.postMessage({
-                    act: "bdload",
-                    ms: d.ms,
-                    cache: t || J,
-                    cs: I(),
-                    gdpr: B,
-                    tcp: y,
-                    tcd: k,
-                    vnd: K,
-                    tms: L
-                }, n))
-    }
+
 
     function ea() {
         var a = 0,
-            b = setInterval(() => {
-                a++
-            }, 100)
-    }
-
-    function fa() {
-        C || function() {
-            try {
-                var a = top.__tcfapi || h.__tcfapi,
-                    b = typeof a
-            } catch (d) {}
-            return "function" == b ? (a("ping", 2, d => {
-            }), !0) : !1
-        }
+            b = setInterval(() => {}, 100)
     }
 
     function I() {
