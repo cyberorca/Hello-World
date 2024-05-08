@@ -95,12 +95,13 @@
 
     function fa() {
         C || function() {
-        try {
-            var a = top.__tcfapi || h.__tcfapi,
-                b = typeof a
-        } catch (d) {}
-        return "function" == b ? (a("ping", 2, d => {
-        }), !0) : !1
+            try {
+                var a = top.__tcfapi || h.__tcfapi,
+                    b = typeof a
+            } catch (d) {}
+            return "function" == b ? (a("ping", 2, d => {
+            }), !0) : !1
+        }
     }
 
     function I() {
