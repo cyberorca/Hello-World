@@ -1,0 +1,81 @@
+<script>
+    window.frameElement.parentElement.parentElement.style.display = "none";
+
+    var klyAds = parent.kmklabs || parent.kly,
+        site = klyAds.site.toLowerCase(),
+        platform = klyAds.platform.toLowerCase(),
+        mgidSource = `<div id="bn_a7dfbba85a"></div><scr` + `ipt>"use strict";!function(e,t,n){function o(){(f=f||t.getElementById("bn_"+n))?(f.innerHTML="",f.id="bn_"+p,c={act:"init",id:n,rnd:p,ms:g},(i=t.getElementById("rcMain"))?s=i.contentWindow:function(){try{(i=t.createElement("iframe")).style.setProperty("display","none","important"),i.id="rcMain",t.body.insertBefore(i,t.body.children[0]),s=i.contentWindow,(d=s.document).open(),d.close(),l=d.body,Object.defineProperty(s,"rcBuf",{enumerable:!1,configurable:!1,writable:!1,value:[]}),function(n,o,r,c){var i=0;!function e(){var t=o.createElement("script");t.type="text/javascript",t.src=n,t.onerror=function(){++i<5?setTimeout(e,10):a(i+"!"+n)},t.onload=function(){c&&c(),i&&a(i+"!"+n)},r.appendChild(t)}()}("https://go.rcvlink.com/static/main.js",d,l,function(){for(var e;s.rcBuf&&(e=s.rcBuf.shift());)s.postMessage(e,u)})}catch(e){r(e)}}(),s.rcMain?s.postMessage(c,u):s.rcBuf.push(c)):a("!bn")}function r(e){a(e.name+": "+e.message+"\t"+(e.stack?e.stack.replace(e.name+": "+e.message,""):""))}function a(e){console.error(e),(new Image).src="https://go.rcvlinks.com/err/?code="+n+"&ms="+((new Date).getTime()-g)+"&ver="+m+"&text="+encodeURIComponent(e)}try{var c,i,s,d,l,m="231101-0007",u=location.origin||location.protocol+"//"+location.hostname+(location.port?":"+location.port:""),f=t.getElementById("bn_"+n),p=Math.random().toString(36).substring(2,15),g=(new Date).getTime();0 in e;f?o():"loading"==t.readyState?t.addEventListener("DOMContentLoaded",o):a("!bn")}catch(e){r(e)}}(window,document,"a7dfbba85a");</sc` + `ript>`,
+        mgidIdMatch = mgidSource.match(/<div id="([^"]+)">/),
+        mgidSrcMatch = mgidSource.match(/<script>(.*)<\/script>/),
+        MGIDId = mgidIdMatch ? mgidIdMatch[1] : null,
+        MGIDSrc = mgidSrcMatch ? mgidSrcMatch[1] : null,
+        MGIDDiv = document.createElement("div"),
+        MGIDScript = document.createElement("script"),
+        MGIDImpression = "https://cdns.klimg.com/d.kapanlaginetwork.com/banner/asset/img/pixel.png";
+
+    let config = {
+        "mobile": {
+            "liputan6": {
+                "targetedEl": '#div-gpt-ad-liputan6-mgid-inarticle',
+                "targetedPosition": "beforeend"
+            },
+            "kapanlagi": {
+                "targetedEl": '#div-gpt-ad-kapanlagi-mgid-inarticle',
+                "targetedPosition": "beforeend"
+            },
+            "fimela": {
+                "targetedEl": '#div-gpt-ad-fimela-mgid-inarticle',
+                "targetedPosition": "beforeend"
+            },
+            "bola.com": {
+                "targetedEl": '#div-gpt-ad-bolacom-mgid-inarticle',
+                "targetedPosition": "beforeend"
+            },
+            "bola": {
+                "targetedEl": '#div-gpt-ad-bola-mgid-inarticle',
+                "targetedPosition": "beforeend"
+            }
+        },
+        "desktop": {
+            "liputan6": {
+                "targetedEl": '#div-gpt-ad-liputan6-mgid-inarticle',
+                "targetedPosition": "beforeend"
+            },
+            "kapanlagi": {
+                "targetedEl": '#div-gpt-ad-kapanlagi-mgid-inarticle',
+                "targetedPosition": "beforeend"
+            },
+            "fimela": {
+                "targetedEl": '#div-gpt-ad-fimela-mgid-inarticle',
+                "targetedPosition": "beforeend"
+            },
+            "bola.com": {
+                "targetedEl": '#div-gpt-ad-bolacom-mgid-inarticle',
+                "targetedPosition": "beforeend"
+            },
+            "bola": {
+                "targetedEl": '#div-gpt-ad-bola-mgid-inarticle',
+                "targetedPosition": "beforeend"
+            }
+        }
+    }
+
+    let targetedEl = config[platform][site].targetedEl,
+        targetedPosition = config[platform][site].targetedPosition;
+
+    MGIDDiv.id = MGIDId;
+    MGIDScript.innerText = MGIDSrc;
+    MGIDScript.setAttribute("async", "true");
+
+    parent.document.querySelector(targetedEl).insertAdjacentElement(targetedPosition, MGIDDiv);
+    parent.document.querySelector(targetedEl).insertAdjacentElement(targetedPosition, MGIDScript);
+
+    function impressionTracker() {
+        var img = document.createElement("img");
+        img.setAttribute("src", MGIDImpression);
+        img.setAttribute("style", "display:none; visibility:hidden;");
+        parent.document.querySelector("body").appendChild(img);
+    }
+
+    impressionTracker();
+</script>
