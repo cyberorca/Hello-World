@@ -43,8 +43,8 @@
                         bimp: b.bimp + ":" + A[e]
                     }, n)
                 }
-            } catch (c) {}
-        }, !0);
+            } catch (c){/** test */};
+        }, !0));
         ea();
         return {}
     }
